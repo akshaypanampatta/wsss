@@ -7,7 +7,7 @@
             <div class="activity-title">
                 <h1>Page headline</h1>
                 <h5>An Undertaking of the Catholic Diocese of Mananthavady.</h5>
-                <button class="green-btn">For more information contact us ></button>
+                <button style="background-color: #0B9F0D;color: #FEFAE0;" class="green-btn">For more information contact us ></button>
             </div>
             <!-- <div class="rotate-box">
             </div> -->

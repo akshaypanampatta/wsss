@@ -921,14 +921,15 @@ font-weight: 400;
 /* -------------AARDS PAGE-------- */
 
 .aswards {
-  background-color: #fefae0;
+  background-color: #fff;
+  border-top: solid 1px #d6d6d6;
 }
 .awards-header {
   padding: 2.5rem 4.5rem 1.5rem 4.5rem;
-  border-bottom: 0.75px solid #283618;
+  border-bottom: 0.75px solid #d1d1d1;
 }
 .awards-header h1 {
-  color: #283618;
+  color: #000;
   font-size: 3.5625rem;
   font-weight: 400;
   width: 30rem;
@@ -957,7 +958,7 @@ font-weight: 400;
   height: 5.5rem;
 }
 .award-text h3 {
-  color: #283618;
+  color: #000;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 140%;
@@ -980,6 +981,7 @@ font-weight: 400;
 .activity {
   position: relative;
   width: 100%;
+  background-color: #fff;
 }
 
 .activity-title {
@@ -988,13 +990,13 @@ font-weight: 400;
   position: absolute;
   bottom: -0.2rem;
   left: 0;
-  background-color: #fefae0;
+  background-color: #fff;
   width: 80%;
   transform-origin: top right;
   clip-path: polygon(0 0, 60% 0%, 100% 100%, 0% 100%);
 }
 .activity-title h1 {
-  color: #283618;
+  color: #000;
   font-size: 3.5625rem;
   font-weight: 400;
 }
@@ -1007,16 +1009,16 @@ font-weight: 400;
 }
 .activity-text {
   padding-top: 1rem;
-  background-color: #fefae0;
+  background-color: #fff;
 }
 
 .line {
   height: 1px;
   width: 50%;
-  background-color: #283618;
+  background-color: #CFCFCF;
 }
 .activity-des h1 {
-  color: #283618;
+  color: #000;
   font-size: 2.25rem;
   font-weight: 400;
 }
@@ -1024,7 +1026,7 @@ font-weight: 400;
   padding: 2rem 4.5rem 5rem 4.5rem;
 }
 .activity-des p {
-  color: #1e1e1e;
+  color: #000;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 1.125rem;
   font-weight: 400;

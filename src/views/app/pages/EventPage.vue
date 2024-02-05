@@ -7,7 +7,7 @@
             <div class="black"></div>
             <img class="play-img" src="/images/play.svg" alt="">
         </div>
-        <div class="project-page-content">
+        <div class="project-page-content" style="padding-bottom: 6rem;">
             <h1>{{form_data.name}}</h1>
             <p v-html="form_data.description"></p>
         </div>
