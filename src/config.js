@@ -1,9 +1,9 @@
 import Vue from "vue";
 
 
-Vue.prototype.$appName = 'Leadfinder Crm';
+Vue.prototype.$appName = 'Wsss';
 // Vue.prototype.api_url = 'http://127.0.0.1:8000';
-Vue.prototype.api_url = 'https://leadfinder.live';
+Vue.prototype.api_url = 'https://api.wsss.capcee.com';
 Vue.prototype.base_url = window.location.origin
 Vue.prototype.domain_name = window.location.hostname
 Vue.prototype.currency = {symbol:'₹',text:'RS',name:'INR'}
@@ -130,6 +130,18 @@ Vue.mixin({
         string = string.replace('.','_')
       }
       return string
+    },
+    stringLimit(str, limit, dottet=false){
+      if(!str){
+        return ''
+      }
+      if(str.length > limit){
+        str = str.substring(0,limit);
+        if(dottet){
+          str+='...'
+        }
+      }
+      return str
     },
     slugToWord(string){
       string = string.replace("_", " ");

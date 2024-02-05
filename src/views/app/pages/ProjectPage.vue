@@ -3,13 +3,13 @@
     <Navbar />
     <div class="project-page">
         <div class="project-page-top">
-            <img class="project-image" src="/images/project1.jpg" alt="">
+            <img class="project-image" :src="form_data.preview?form_data.preview:'/images/no_img.png'" alt="">
             <div class="black"></div>
             <img class="play-img" src="/images/play.svg" alt="">
         </div>
         <div class="project-page-content">
-            <h1>WSSS is forming 200 joint lability groups (JLGS)</h1>
-            <p>The Wayanad Service Society (WSSS), the official social work wing of the Mananthavady Diocese, has been accorded special consultative status with the United Nations Economic and Social Council (ECOSOC).The recognition was a testimony to the dedicated efforts that the organization has been making since its inception in 1974.This consultative status will enable the organization to actively engage with ECOSOC and its subsidiary bodies, UN secretariat, programmes, projects and funds in a number of ways. Wayanad Social Service Society started the process of interaction and procedures of project application with UN since 2015. It is a great achievement that the organization gained this successful international development platform which will definitely make conducive atmosphere with the Sustainable Development Goals (SDG 2030).</p>
+            <h1>{{form_data.name}}</h1>
+            <p v-html="form_data.description"></p>
         </div>
     </div>
     <Footer/>
@@ -26,6 +26,30 @@ export default {
     components: {
         Navbar,
         Footer
+    },
+    data(){
+        return{
+            form_data : {id:this.$route.params.id},
+        }
+    },
+    mounted(){
+        this.getProject()
+    },
+    methods: {
+        getProject(){
+            var headers = new Headers()
+            headers.append("Authorization", "Token "+this.$root.token);
+	      	fetch(this.api_url+'/wsss/projects/'+this.form_data.id+'/', {
+	          	method : 'get',
+                headers: headers,
+	      	})
+	      	.then((response) => {
+	          return response.json()
+	      	})
+	      	.then((jsonData) => {
+                this.form_data = jsonData
+	      	})
+        }
     }
 }
 </script>

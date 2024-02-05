@@ -28,8 +28,16 @@ const routes = [
             component: () => import("./views/app/pages/home"),
           },
           {
-            path: "project",
+            path: "project/:id",
             component: () => import("./views/app/pages/ProjectPage"),
+          },
+          {
+            path: "event/:id",
+            component: () => import("./views/app/pages/EventPage"),
+          },
+          {
+            path: "view/:page",
+            component: () => import("./views/app/pages/viewAll"),
           },
           {
             path: "awards",

@@ -1,6 +1,9 @@
 <template>
 <div class="footerr">
-    <div class="footer-top">
+    <div>
+        
+    </div>
+    <!-- <div class="footer-top">
         <div class="footer-top-left">
             <h1>Get in touch</h1>
             <p class="">Wayanad Social Service Society (WSSS) is a registered charitable society and a secular voluntary organization established in the year 1974. It is the official social service organization of the Catholic Diocese of Mananthavady.</p>
@@ -36,7 +39,7 @@
 
         </div>
 
-    </div>
+    </div> -->
 
 </div>
 </template>
