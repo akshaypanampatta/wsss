@@ -9,24 +9,88 @@
                         <router-link class="custom-router" to="/">
                             <button>Home</button>
                         </router-link>
-                        <router-link class="custom-router" to="/view/projects">
-                            <button>Projects</button>
-                        </router-link>
-                        <button>About us</button>
+                        <!-- <router-link class="custom-router" to="/view/projects"> -->
+                        <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret>
+                            <template #button-content>
+                                <button>Projects <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M16.5716 11.7143L12.0001 16.2857L7.42871 11.7143" stroke="white" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></button>
+                            </template>
+                            <div class="custom-dropdown">
+                                <div style="padding: 0.625rem 1.5rem;">
+                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 1</h4>
+                                </div>
+                                <div style="padding: 0.625rem 1.5rem;">
+                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 2</h4>
+                                </div>
+                                <div style="padding: 0.625rem 1.5rem;">
+                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 3</h4>
+                                </div>
+                                <div style="padding: 0.625rem 1.5rem;">
+                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 4</h4>
+                                </div>
+
+                            </div>
+                        </b-dropdown>
+
+                        <!-- </router-link> -->
+                        <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret>
+                            <template #button-content>
+                                <button>About us <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M16.5716 11.7143L12.0001 16.2857L7.42871 11.7143" stroke="white" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></button>
+                            </template>
+                            <div class="custom-dropdown">
+                                <div style="padding: 0.625rem 1.5rem;">
+                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 1</h4>
+                                </div>
+                                <div style="padding: 0.625rem 1.5rem;">
+                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 2</h4>
+                                </div>
+                                <div style="padding: 0.625rem 1.5rem;">
+                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 3</h4>
+                                </div>
+                                <div style="padding: 0.625rem 1.5rem;">
+                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 4</h4>
+                                </div>
+
+                            </div>
+                        </b-dropdown>
                         <router-link class="custom-router" to="/awards">
                             <button>Awards & Recognitions</button>
                         </router-link>
                         <button>Gallery</button>
-                        <router-link class="custom-router" to="/activities">
-                            <button>Activities</button>
-                        </router-link>
+                        <!-- <router-link class="custom-router" to="/activities"> -->
+                        <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret>
+                            <template #button-content>
+                                <button>Activities <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M16.5716 11.7143L12.0001 16.2857L7.42871 11.7143" stroke="white" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></button>
+                            </template>
+                            <div class="custom-dropdown">
+                                <div style="padding: 0.625rem 1.5rem;">
+                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 1</h4>
+                                </div>
+                                <div style="padding: 0.625rem 1.5rem;">
+                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 2</h4>
+                                </div>
+                                <div style="padding: 0.625rem 1.5rem;">
+                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 3</h4>
+                                </div>
+                                <div style="padding: 0.625rem 1.5rem;">
+                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 4</h4>
+                                </div>
+
+                            </div>
+                        </b-dropdown>
+                        <!-- </router-link> -->
                         <button>Contact</button>
                         <button @click="openNav" class="menu-btn"><img src="/images/menu.svg" alt=""></button>
                     </div>
-                    <button class="donate-btn">Donate</button>
+                    <button style="background-color: #0B9F0D;color: #fff;" class="donate-btn">Donate</button>
                 </div>
                 <div class="logo">
-                    <img src="/images/logo.png" alt="">
+                    <img class="nav-logo-2" src="/images/new-logo.png" alt="">
                 </div>
                 <div class="banner-text">
                     <h1>{{banner.banner_title}}</h1>
@@ -51,7 +115,7 @@
                     <div v-for="(story,index) in stories" class="one-breaking-story">
 
                         <div class="overlay">
-                            <img :src="story.preview?api_url+story.preview:'/images/no_img.png'" alt="">
+                            <img class="breaking-image" :src="story.preview?api_url+story.preview:'/images/no_img.png'" alt="">
                             <img class="play-icon" src="/images/play.svg" alt="">
                         </div>
 
@@ -59,12 +123,14 @@
                             <div class="d-flex flex-column" style="gap: 0.65rem;">
                                 <h3>{{story.name}}</h3>
                                 <div class="d-flex align-items-center" style="gap: 0.84rem;">
-                                    <button class="pill-btn">Latest</button>
+                                    <button style="padding: 0.28125rem 1.125rem;font-size: 0.75rem;" class="pill-btn">Latest</button>
                                     <h4>{{dateFormate(story.date)}}</h4>
                                 </div>
                             </div>
                             <div>
-                                <img src="/images/arrow-right.png" alt="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                                    <path d="M19.5249 7.16555C19.4748 7.21562 19.435 7.27507 19.4079 7.34051C19.3808 7.40595 19.3668 7.4761 19.3668 7.54694C19.3668 7.61778 19.3808 7.68793 19.4079 7.75337C19.435 7.81881 19.4748 7.87826 19.5249 7.92833L28.3076 16.711H5.89069C5.74772 16.711 5.61061 16.7678 5.50951 16.8689C5.40842 16.97 5.35163 17.1071 5.35163 17.2501C5.35163 17.393 5.40842 17.5301 5.50951 17.6312C5.61061 17.7323 5.74772 17.7891 5.89069 17.7891H28.3076L19.5249 26.5718C19.4748 26.6219 19.4351 26.6813 19.408 26.7468C19.3809 26.8122 19.367 26.8824 19.367 26.9532C19.367 27.024 19.3809 27.0942 19.408 27.1596C19.4351 27.225 19.4748 27.2845 19.5249 27.3346C19.575 27.3847 19.6345 27.4244 19.6999 27.4515C19.7653 27.4786 19.8355 27.4926 19.9063 27.4926C19.9771 27.4926 20.0473 27.4786 20.1127 27.4515C20.1782 27.4244 20.2376 27.3847 20.2877 27.3346L29.9908 17.6315C30.0409 17.5814 30.0807 17.5219 30.1078 17.4565C30.135 17.3911 30.1489 17.3209 30.1489 17.2501C30.1489 17.1792 30.135 17.1091 30.1078 17.0436C30.0807 16.9782 30.0409 16.9187 29.9908 16.8687L20.2877 7.16555C20.2376 7.11543 20.1782 7.07567 20.1127 7.04855C20.0473 7.02142 19.9772 7.00745 19.9063 7.00745C19.8355 7.00745 19.7653 7.02142 19.6999 7.04855C19.6344 7.07567 19.575 7.11543 19.5249 7.16555Z" fill="black" />
+                                </svg>
                             </div>
                         </div>
                     </div>
