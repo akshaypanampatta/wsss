@@ -5,24 +5,84 @@
             <router-link class="custom-router" to="/">
                 <button>Home</button>
             </router-link>
-            <router-link class="custom-router" to="/project">
-                <button>Projects</button>
-            </router-link>
-            <button>About us</button>
+            <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret>
+                <template #button-content>
+                    <button>Projects
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+  <path d="M16.5716 12.2143L12.0001 16.7857L7.42871 12.2143" stroke="#1E1E1E" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></button>
+                </template>
+                <div class="custom-dropdown">
+                    <div style="padding: 0.625rem 1.5rem;">
+                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 1</h4>
+                    </div>
+                    <div style="padding: 0.625rem 1.5rem;">
+                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 2</h4>
+                    </div>
+                    <div style="padding: 0.625rem 1.5rem;">
+                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 3</h4>
+                    </div>
+                    <div style="padding: 0.625rem 1.5rem;">
+                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 4</h4>
+                    </div>
+
+                </div>
+            </b-dropdown>
+            <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret>
+                <template #button-content>
+                    <button>About us <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+  <path d="M16.5716 12.2143L12.0001 16.7857L7.42871 12.2143" stroke="#1E1E1E" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></button>
+                </template>
+                <div class="custom-dropdown">
+                    <div style="padding: 0.625rem 1.5rem;">
+                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 1</h4>
+                    </div>
+                    <div style="padding: 0.625rem 1.5rem;">
+                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 2</h4>
+                    </div>
+                    <div style="padding: 0.625rem 1.5rem;">
+                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 3</h4>
+                    </div>
+                    <div style="padding: 0.625rem 1.5rem;">
+                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 4</h4>
+                    </div>
+
+                </div>
+            </b-dropdown>
             <router-link class="custom-router" to="/awards">
                 <button>Awards & Recognitions</button>
             </router-link>
             <button>Gallery</button>
-            <router-link class="custom-router" to="/activities">
-                <button>Activities</button>
-            </router-link>
+            <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret>
+                <template #button-content>
+                    <button>Activities <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+  <path d="M16.5716 12.2143L12.0001 16.7857L7.42871 12.2143" stroke="#1E1E1E" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></button>
+                </template>
+                <div class="custom-dropdown">
+                    <div style="padding: 0.625rem 1.5rem;">
+                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 1</h4>
+                    </div>
+                    <div style="padding: 0.625rem 1.5rem;">
+                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 2</h4>
+                    </div>
+                    <div style="padding: 0.625rem 1.5rem;">
+                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 3</h4>
+                    </div>
+                    <div style="padding: 0.625rem 1.5rem;">
+                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 4</h4>
+                    </div>
+
+                </div>
+            </b-dropdown>
             <button>Contact</button>
             <button @click="openNav" class="menu-btn"><img src="/images/menu-2.svg" alt=""></button>
         </div>
-        <button class="green-btn">Donate</button>
-        <div class="nav-logo">
-            <img class="nav-logo-image" src="/images/footer-logo.png" alt="">
-        </div>
+        <button style="background-color: #0B9F0D;color: #fff;" class="green-btn">Donate</button>
+
+        <img class="nav-logo-image" src="/images/nav-logo.png" alt="">
+
     </div>
     <div v-if="showMobileNav" class="navbar-mobile">
         <div class="nav-mobile-top">
