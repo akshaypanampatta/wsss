@@ -129,7 +129,7 @@
                     </router-link>
                 </div>
                 <div class="">
-                    <div class="custom-router project-cards">
+                    <div class="custom-router project-cards ">
                         <div v-for="project in projects" class="project-one-card">
                             <router-link :to="'/project/'+project.id">
                                 <button style="font-family: 'IBM Plex Sans', sans-serif;" class="pill-btn">{{dateFormate(project.date)}}</button>

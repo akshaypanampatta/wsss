@@ -260,7 +260,7 @@ background-color: rgba(0, 0, 0, 0.5);
   left: 13rem;
 }
 .projects{
-  padding: 4.38rem 0 1.72rem 4.5rem;
+  padding: 4.38rem 0 0 0;
   background-color: fff;
 }
 .main-title{
@@ -280,13 +280,14 @@ background-color: rgba(0, 0, 0, 0.5);
   justify-content: space-between;
   align-items: baseline;
   padding-right: 4.5rem;
+  padding-left: 4.5rem;
 }
 .project-one-card{
   /* border: 1.5px solid #283618; */
   background-color: #fff;
   padding: 0.375rem 0.375rem 1rem 0.375rem;
-  min-width: 16.8125rem;
-  max-width: 16.8125rem;
+  min-width: 25.75rem;
+  max-width: 25.75rem;
   display: flex;
   flex-direction: column;
   /* gap: 0.5rem; */
@@ -296,8 +297,8 @@ background-color: rgba(0, 0, 0, 0.5);
 
 }
 .project-one-card img{
-  width: 16.0625rem;
-height: 17.6875rem;
+  width: 25rem;
+height:14rem;
 border-radius: 0.5rem;
 }
 .project-one-card .pill-btn{
@@ -313,7 +314,9 @@ border-radius: 0.5rem;
   letter-spacing: 0.01406rem;
 }
 .project-cards{
-  margin-top: 1.8rem;
+  padding-top: 1.83rem;
+  padding-bottom: 3.16rem;
+  padding-left: 4.5rem;
   display: flex;
   gap: 1.25rem;
   overflow-x: auto;
@@ -321,18 +324,26 @@ border-radius: 0.5rem;
   /* padding-right: 1rem; */
   background-color: #fff;
 }
+.project-cards::-webkit-scrollbar{
+  display: none;
+}
 
 .updates{
-  padding: 1.8rem 0 2.56rem 4.5rem;
+  padding: 1.8rem 0 0 0;
   background-color: #fff;
 }
 .update-cards{
-  margin-top: 1.83rem;
+  padding-top: 1.83rem;
   width: 100%;
+  padding-left: 4.5rem;
+  padding-bottom: 2.56rem;
   display: flex;
   gap: 1.5rem;
   /* justify-content: space-between; */
   overflow-x: auto;
+}
+.update-cards::-webkit-scrollbar{
+  display: none;
 }
 .update-one-card{
   /* width: 33.33%; */
@@ -371,8 +382,11 @@ border-radius: 0.5rem;
 /* ----------TESTIMONIALS------------ */
 
 .testimonials{
-  padding: 2rem 0 4.25rem 0;
+  padding: 2rem 0 0 0;
   
+}
+.testimonials-list{
+  padding: 1.8rem 0 4.25rem 0;
 }
 .testimonials-list::-webkit-scrollbar{
   display: none!important;
@@ -596,6 +610,52 @@ font-weight: 400;
   /* flex-direction: column; */
   width: 100%;
   padding: 7.25rem 10.3rem 8.9rem 4.4rem;
+}
+.footerr h1{
+  color: #FFF;
+font-size: 2.625rem;
+font-weight: 400;
+line-height: 1.78125rem;
+}
+.footerr p{
+  color: #FFF;
+font-size: 1rem;
+font-weight: 400;
+font-family: 'IBM Plex Sans', sans-serif;
+}
+.footerr h6{
+  color: #FFF;
+font-size: 1.25rem;
+font-weight: 600;
+line-height: 1.25rem;
+font-family: 'IBM Plex Sans', sans-serif;
+}
+.footerr h5{
+color: #838383;
+font-family: 'IBM Plex Sans', sans-serif;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.875rem;
+}
+.logo-footer{
+  width: 4.6875rem;
+height: 4.6875rem;
+}
+.footerr input{
+  outline: none;
+  border: none;
+  padding: 0.75rem;
+  border-bottom: 1px solid #888;
+  background-color: #222;
+  width: 25rem;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #fff;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+.footerr input::placeholder{
+  color: #858585;
 }
 /* .footer-top{
   display: flex;
