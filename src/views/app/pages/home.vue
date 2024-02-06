@@ -34,6 +34,7 @@
                         </b-dropdown>
 
                         <!-- </router-link> -->
+
                         <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret>
                             <template #button-content>
                                 <button>About us <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -42,16 +43,31 @@
                             </template>
                             <div class="custom-dropdown">
                                 <div style="padding: 0.625rem 1.5rem;">
-                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 1</h4>
+                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Initiatives</h4>
+                                </div>
+                                <router-link to="/history" class="custom-router">
+                                    <div style="padding: 0.625rem 1.5rem;">
+                                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">History</h4>
+                                    </div>
+                                    
+                                </router-link>
+                                <div style="padding: 0.625rem 1.5rem;">
+                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Partners in Development</h4>
                                 </div>
                                 <div style="padding: 0.625rem 1.5rem;">
-                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 2</h4>
+                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Consultancy Services</h4>
                                 </div>
                                 <div style="padding: 0.625rem 1.5rem;">
-                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 3</h4>
+                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Annual Reports & Audit Statements</h4>
                                 </div>
                                 <div style="padding: 0.625rem 1.5rem;">
-                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 4</h4>
+                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Wsss Team</h4>
+                                </div>
+                                <div style="padding: 0.625rem 1.5rem;">
+                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Career</h4>
+                                </div>
+                                <div style="padding: 0.625rem 1.5rem;">
+                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">ERP Login</h4>
                                 </div>
 
                             </div>

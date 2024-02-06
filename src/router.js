@@ -47,6 +47,10 @@ const routes = [
             path: "activities",
             component: () => import("./views/app/pages/Activities"),
           },
+          {
+            path: "history",
+            component: () => import("./views/app/pages/History"),
+          },
         ],
       },
     ],
