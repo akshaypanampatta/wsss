@@ -115,7 +115,7 @@ a:hover {
   height: 5.875rem;
 
   left: 4.5rem;
-  z-index: 2;
+  z-index: 1;
 }
 /* .logo img{
   width: 4.75rem;
@@ -130,7 +130,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
-  z-index: 2;
+  z-index: 1;
 }
 .banner-text h1 {
   font-size: 3.5rem;
@@ -160,7 +160,7 @@ a:hover {
   height: 70%;
   background-color: #fff;
   padding: 1.21875rem 1.5rem 0rem 1.5rem;
-  z-index: 2;
+  z-index: 1;
 }
 .sub-title {
   color: #000;
@@ -428,6 +428,7 @@ a:hover {
   height: 14rem;
   border-radius: 0.5rem;
   width: 100%;
+  object-fit: cover;
 }
 
 .one-testimonial iframe {
@@ -453,15 +454,19 @@ a:hover {
 .mision-vision {
   margin: 3.38rem 0 6.6rem 0;
   display: flex;
-  border-radius: 0.75rem;
+  gap: 2rem;
+  /* border-radius: 0.75rem;
+  
   background: #fff;
-  box-shadow: 0px 6px 24px 0px rgba(212, 56, 56, 0.1);
+  box-shadow: 0px 6px 24px 0px rgba(212, 56, 56, 0.1); */
 }
 .one-vision {
   width: 25rem;
   /* height: 23rem; */
   /* box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.1); */
   overflow: hidden;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.10);
+  border-radius: 0.75rem;
 }
 .one-vision img {
   height: 15.3125rem;
@@ -1145,7 +1150,7 @@ line-height:  1.8rem
 .custom-dropdown {
   font-family: "IBM Plex Sans", sans-serif;
   z-index: 1000 !important;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .view-all-one-card {
   background-color: #fff;
@@ -1179,6 +1184,44 @@ line-height:  1.8rem
   flex: 0 0 calc((100% - 3rem) / 3);
   min-width: none;
   max-width: none;
+}
+
+.projects-dropdown {
+padding: 1.75rem 1.75rem 0.8125rem 1.75rem;
+background-color: #fff;
+width: auto;
+height: auto;
+z-index: 1001;
+width: 81rem;
+display: flex;
+flex-direction: column;
+
+
+}
+.projects-dropdown span {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  width: 24rem;
+  
+  margin-right: 1.5rem;
+}
+.projects-dropdown span:hover{
+  background-color: #f4f4f4;
+}
+.projects-dropdown span h4 {
+ font-size: 1.125rem;
+ color: #000;
+ line-height: 1.75rem;
+ font-weight: 500;
+ font-family: "IBM Plex Sans", sans-serif;
+}
+.projects-dropdown span p{
+ font-size: 1rem;
+ color: #0B9F0D;
+ font-weight: 500;
+ font-family: "IBM Plex Sans", sans-serif;
 }
 
 /* -----------Annual reports---------- */

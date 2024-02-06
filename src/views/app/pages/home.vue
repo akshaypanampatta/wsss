@@ -10,26 +10,33 @@
                             <button>Home</button>
                         </router-link>
                         <!-- <router-link class="custom-router" to="/view/projects"> -->
-                        <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret>
+                        <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret right="10"  >
                             <template #button-content>
                                 <button>Projects <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <path d="M16.5716 11.7143L12.0001 16.2857L7.42871 11.7143" stroke="white" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg></button>
                             </template>
-                            <div class="custom-dropdown">
-                                <div style="padding: 0.625rem 1.5rem;">
-                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 1</h4>
-                                </div>
-                                <div style="padding: 0.625rem 1.5rem;">
-                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 2</h4>
-                                </div>
-                                <div style="padding: 0.625rem 1.5rem;">
-                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 3</h4>
-                                </div>
-                                <div style="padding: 0.625rem 1.5rem;">
-                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 4</h4>
-                                </div>
+                            <div  class="projects-dropdown custom-dropdown">
+                                <div class="d-flex flex-wrap">
+                                <router-link class="pb-4" :to="'/project/'+project.id" v-for="(project, pk) in projects" v-if="pk<5">
+                                    <span>
+                                        <h4>{{project.name}}</h4>
+                                        <div class="d-flex align-items-center">
+                                            <p>Know more</p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" fill="#0B9F0D" />
+                                            </svg>
 
+                                        </div>
+                                    </span>
+                                </router-link>
+                                </div>
+                                <div class="d-flex justify-content-between" style="padding: 1.25rem 1.5rem;border-top: solid 1px #c6c6c6;">
+                                    <h4 style="color: #000;font-size: 1.125rem;font-weight: 500;text-decoration: underline;line-height: 1.7rem;">View All Projects</h4>
+                                    <img src="/images/logo-drop.png" alt="">
+
+                                </div>
+                                
                             </div>
                         </b-dropdown>
 
@@ -86,19 +93,11 @@
                                     </svg></button>
                             </template>
                             <div class="custom-dropdown">
-                                <div style="padding: 0.625rem 1.5rem;">
-                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 1</h4>
-                                </div>
-                                <div style="padding: 0.625rem 1.5rem;">
-                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 2</h4>
-                                </div>
-                                <div style="padding: 0.625rem 1.5rem;">
-                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 3</h4>
-                                </div>
-                                <div style="padding: 0.625rem 1.5rem;">
-                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 4</h4>
-                                </div>
-
+                                <router-link :to="'/event/'+event.id" v-for="event in events">
+                                    <div style="padding: 0.625rem 1.5rem;">
+                                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">{{event.name}}</h4>
+                                    </div>
+                                </router-link>
                             </div>
                         </b-dropdown>
                         <!-- </router-link> -->
@@ -230,7 +229,6 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-
                                 </div>
                             </router-link>
                         </div>
@@ -276,20 +274,17 @@
             <div class="testimonials">
                 <h1>Testimonials</h1>
                 <div class="d-flex testimonials-list" style="gap: 1.5rem;overflow-x: auto;">
-                    <div v-for="index in 10" :key="index" class="one-testimonial">
-                        <img src="/images/testimonial.png" alt="">
-                        <div class="d-flex flex-column mt-2" style="padding: 0 0.75rem;gap: 0.5rem;">
-                            <h2>BEST PFA (NABARD WADI PROJCET)</h2>
-                            <p>06-02-24</p>
-                        </div>
+
+                    <div v-for="testimonial in testimonials" :key="index" class="one-testimonial">
+                        <router-link :to="'/testimonial/'+testimonial.id" class="custom-router">
+                            <img :src="testimonial.preview?api_url+testimonial.preview:'/images/no_img.png'" alt="">
+                            <div class="d-flex flex-column mt-2" style="padding: 0 0.75rem;gap: 0.5rem;">
+                                <h2>{{ testimonial.name }}</h2>
+                                <p>{{ dateFormate(testimonial.date) }}</p>
+                            </div>
+                        </router-link>
                     </div>
-                    <div v-for="index in 10" :key="index" class="one-testimonial">
-                        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-                        <div class="d-flex flex-column mt-2" style="padding: 0 0.75rem;gap: 0.5rem;">
-                            <h2>BEST PFA (NABARD WADI PROJCET)</h2>
-                            <p>06-02-24</p>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -297,7 +292,7 @@
 
             <div class="mision-vision">
                 <div class="one-vision">
-                    <img src="/images/vision-1.png" alt="">
+                    <img src="/images/vision5.png" alt="">
                     <div class="d-flex " style="gap: 0.25rem;padding: 2.1875rem 1.5rem;gap: 0.9375rem;">
                         <h6>(1)</h6>
                         <div class="d-flex align-items-center" style="gap: 0.25rem;">
@@ -312,7 +307,7 @@
                     </div>
                 </div>
                 <div class="one-vision">
-                    <img src="/images/mission.png" alt="">
+                    <img src="/images/mision5.png" alt="">
                     <div class="d-flex " style="gap: 0.25rem;padding: 2.1875rem 1.5rem;gap: 0.9375rem;">
                         <h6>(2)</h6>
                         <div class="d-flex align-items-center" style="gap: 0.25rem;">
@@ -327,7 +322,7 @@
                     </div>
                 </div>
                 <div class="one-vision">
-                    <img src="/images/objective.png" alt="">
+                    <img src="/images/objective5.png" alt="">
                     <div class="d-flex " style="gap: 0.25rem;padding: 2.1875rem 1.5rem;gap: 0.9375rem;">
                         <h6>(3)</h6>
                         <div class="d-flex align-items-center" style="gap: 0.25rem;">
@@ -401,12 +396,14 @@
 <script>
 import Project from "./components/Project.vue"
 import Footer from "./components/Footer.vue"
+import router from "../../../router";
 
 export default {
     name: "home",
     components: {
         Project,
         Footer,
+        router
     },
     data() {
         return {
@@ -427,6 +424,7 @@ export default {
                     image: "/images/breaking-2.png"
                 },
             ],
+
             donateSectionHover: false,
             sectionBackgroundColor: '#1E1E1E',
             visionImage: "/images/vision.png",
@@ -435,6 +433,7 @@ export default {
             stories: [],
             projects: [],
             events: [],
+            testimonials: [],
         };
     },
     mounted() {
@@ -456,6 +455,7 @@ export default {
                     this.stories = jsonData.stories
                     this.projects = jsonData.projects
                     this.events = jsonData.events
+                    this.testimonials = jsonData.testimonials
                 })
         },
         openNav() {

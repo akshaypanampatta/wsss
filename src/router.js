@@ -55,6 +55,10 @@ const routes = [
             path: "annual-reports",
             component: () => import("./views/app/pages/AnnualReports"),
           },
+          {
+            path: "testimonial/:id",
+            component: () => import("./views/app/pages/Testimonial"),
+          },
         ],
       },
     ],
