@@ -51,6 +51,10 @@ const routes = [
             path: "history",
             component: () => import("./views/app/pages/History"),
           },
+          {
+            path: "annual-reports",
+            component: () => import("./views/app/pages/AnnualReports"),
+          },
         ],
       },
     ],
