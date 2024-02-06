@@ -5,25 +5,31 @@
             <router-link class="custom-router" to="/">
                 <button>Home</button>
             </router-link>
-            <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret>
+            <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret right="10">
                 <template #button-content>
-                    <button>Projects
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                            <path d="M16.5716 12.2143L12.0001 16.7857L7.42871 12.2143" stroke="#1E1E1E" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg></button>
+                    <button>Projects <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+  <path d="M16.5716 12.2144L12.0001 16.7858L7.42871 12.2144" stroke="#1E1E1E" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></button>
                 </template>
-                <div class="custom-dropdown">
-                    <div style="padding: 0.625rem 1.5rem;">
-                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 1</h4>
+                <div class="projects-dropdown custom-dropdown">
+                    <div class="d-flex flex-wrap">
+                        <router-link to="" v-for="index in 6" class="pb-4">
+                            <span>
+                                <h4>Project 1</h4>
+                                <div class="d-flex align-items-center">
+                                    <p>Know more</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" fill="#0B9F0D" />
+                                    </svg>
+
+                                </div>
+                            </span>
+                        </router-link>
                     </div>
-                    <div style="padding: 0.625rem 1.5rem;">
-                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 2</h4>
-                    </div>
-                    <div style="padding: 0.625rem 1.5rem;">
-                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 3</h4>
-                    </div>
-                    <div style="padding: 0.625rem 1.5rem;">
-                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Option 4</h4>
+                    <div class="d-flex justify-content-between" style="padding: 1.25rem 1.5rem;border-top: solid 1px #c6c6c6;">
+                        <h4 style="color: #000;font-size: 1.125rem;font-weight: 500;text-decoration: underline;line-height: 1.7rem;">View All Projects</h4>
+                        <img src="/images/logo-drop.png" alt="">
+
                     </div>
 
                 </div>

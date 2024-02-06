@@ -1135,8 +1135,12 @@ line-height:  1.8rem
   line-height: 2.8125rem;
   margin-top: 0.9375rem;
 }
+.dropdown-menu-right{
+  transform: translate3d(-500px, 50px, 0px) !important;
+
+}
 .dropdown-menu {
-  /* transform: translate3d(-200px, 50px, 0px) !important; */
+  
   min-width: 14.875rem;
   border-radius: 0.75rem;
   background-color: #f6f6f6;

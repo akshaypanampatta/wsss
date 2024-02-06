@@ -51,11 +51,56 @@
                         </div>
                     </div>
                 </div>
+                <div class="one-award">
+                    <div class="award-text">
+                        <div class="d-flex align-items-center " style="gap: 1.5rem;">
+                            <img class="badgee" src="/images/badge2.png" alt="">
+                            <h3>Paristhithi Mithra Award, Uzhavoor College</h3>
+                        </div>
+                        <div>
+                            <p>No text</p>
+                        </div>
+                    </div>
+                    <div class="one-award-left">
+                        <img src="/images/award4.png" alt="">
+                    </div>
+
+                </div>
+                <div class="one-award">
+                    <div class="one-award-left">
+                        <img src="/images/award5.png" alt="">
+                    </div>
+                    <div class="award-text">
+                        <div class="d-flex align-items-center" style="gap: 1.5rem;">
+                            <img class="badgee" src="/images/badge2.png" alt="">
+                            <h3>Excellence Award: Kerala Social Service Form- 2014</h3>
+                        </div>
+                        <div>
+                            <p>To text</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="one-award">
+                    <div class="award-text">
+                        <div class="d-flex align-items-center " style="gap: 1.5rem;">
+                            <img class="badgee" src="/images/badge2.png" alt="">
+                            <h3>Best overall performance of State Nodal Agency ( first prize) : Vikaspedia- 2016</h3>
+                        </div>
+                        <div>
+                            <p>No text</p>
+                        </div>
+                    </div>
+                    <div class="one-award-left">
+                        <img src="/images/award6.png" alt="">
+                    </div>
+
+                </div>
+
             </div>
-            <div style="padding: 2.625rem 0;border-bottom: solid 1px #d1d1d1;">
+            <!-- <div style="padding: 2.625rem 0;border-bottom: solid 1px #d1d1d1;">
                 <h1 style="font-size: 3.5625rem;font-weight: 400;color: #000;">Other Awards</h1>
-            </div>
-            <div v-for="(award,index) in awards" class="other-awards py-4 d-flex align-items-center">
+            </div> -->
+            <!-- <div v-for="(award,index) in awards" class="other-awards py-4 d-flex align-items-center">
                 <img src="/images/badge2.png" alt="">
                 <p>{{ award.name }}</p>
             </div>
@@ -70,7 +115,7 @@
                         <img  src="/images/awards.png" alt="">
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 

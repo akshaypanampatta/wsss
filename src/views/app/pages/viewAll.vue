@@ -9,7 +9,28 @@
                     <div class="projects-top">
                         <h1 class="main-title">Projects</h1>
                     </div>
-                    <div style="padding: 1.98rem 4.5rem 4.5rem 4.5rem;gap: 1.875rem;" class="d-flex w-100 flex-wrap">
+                    <div v-if="projectSkeleton" style="padding: 1.98rem 4.5rem 4.5rem 4.5rem;gap: 1.875rem;" class="d-flex w-100 flex-wrap">
+                        <div v-for="project in projects" class="view-all-one-card">
+                            <router-link :to="'/project/'+project.id">
+                                <b-skeleton-img no-aspect height="350px"></b-skeleton-img>
+                                <div class="d-flex pt-2 align-items-center justify-content-between" style="gap: 0.375rem;padding: 0 0.75rem;">
+                                    <div class="d-flex flex-column">
+                                        <h2>
+                                            <b-skeleton animation="wave" style="height: 1rem;border-radius: 1rem;" width="9rem"></b-skeleton>
+                                        </h2>
+                                        <h2>
+                                            <b-skeleton animation="wave" style="height: 1rem;border-radius: 1rem;" width="5rem"></b-skeleton>
+                                        </h2>
+                                    </div>
+                                    <b-skeleton animation="wave" style="height: 1rem;border-radius: 1rem;" width="2rem"></b-skeleton>
+                                    <button style="font-family: 'IBM Plex Sans', sans-serif;background-color: #adadad;" class="pill-btn">
+                                        <b-skeleton animation="wave" style="height: 1rem;border-radius: 1rem;" width="5rem"></b-skeleton>
+                                    </button>
+                                </div>
+                            </router-link>
+                        </div>
+                    </div>
+                    <div v-else style="padding: 1.98rem 4.5rem 4.5rem 4.5rem;gap: 1.875rem;" class="d-flex w-100 flex-wrap">
                         <div v-for="project in projects" class="view-all-one-card">
                             <router-link :to="'/project/'+project.id">
                                 <img :src="project.preview?project.preview:'/images/no_img.png'" alt="" style="height: 350px;">
@@ -37,10 +58,33 @@
                 <div class="projects-top">
                     <h1 class="main-title">Updates & Events</h1>
                 </div>
-                <div class="d-flex flex-wrap" style="padding: 2.37rem 4.5rem 5rem 4.5rem;gap: 1.5rem;">
-                     <div v-for="event in events" class="update-card-view-all update-one-card">
+                <div v-if="projectSkeleton" class="d-flex flex-wrap" style="padding: 2.37rem 4.5rem 5rem 4.5rem;gap: 1.5rem;">
+                    <div v-for="event in events" class="update-card-view-all update-one-card">
                         <router-link :to="'/event/'+event.id">
-                            <img style="width: 100%;" :src="event.preview?event.preview:'/images/no_img.png'" alt="" >
+                            <b-skeleton-img no-aspect height="12.5rem"></b-skeleton-img>
+                            <div style="padding: 1.13rem 1.25rem 2.13rem 1.37rem;">
+                                <b-skeleton animation="wave" style="min-height: 1.5rem;border-radius: 1rem;" width="5rem"></b-skeleton>
+                                <b-skeleton animation="wave" style="height: 1rem;border-radius: 1rem;margin: 1rem 0;" width="60%"></b-skeleton>
+                                <div class="d-flex flex-column">
+                                    <b-skeleton animation="wave" style="max-height: 0.75rem;border-radius: 1rem;" width="90%"></b-skeleton>
+                                    <b-skeleton animation="wave" style="max-height: 0.75rem;border-radius: 1rem;" width="95%"></b-skeleton>
+                                    <b-skeleton animation="wave" style="max-height: 0.75rem;border-radius: 1rem;" width="85%"></b-skeleton>
+                                    <b-skeleton animation="wave" style="max-height: 0.75rem;border-radius: 1rem;" width="60%"></b-skeleton>
+
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center" style="padding: 0.25rem 1.375rem 2rem 1.375rem;gap: 0.375rem;">
+                                <b-skeleton animation="wave" style="height: 1.5rem;border-radius: 1rem;" width="5rem"></b-skeleton>
+                                <b-skeleton animation="wave" style="height: 1.5rem;border-radius: 1rem;" width="2rem"></b-skeleton>
+                            </div>
+                        </router-link>
+                    </div>
+
+                </div>
+                <div v-else class="d-flex flex-wrap" style="padding: 2.37rem 4.5rem 5rem 4.5rem;gap: 1.5rem;">
+                    <div v-for="event in events" class="update-card-view-all update-one-card">
+                        <router-link :to="'/event/'+event.id">
+                            <img style="width: 100%;" :src="event.preview?event.preview:'/images/no_img.png'" alt="">
                             <div style="padding: 1.13rem 1.25rem 2.13rem 1.37rem;">
                                 <button style="padding: 0.1875rem 1.5rem;font-size: 1.0625rem;line-height: 1.59375rem" class="pill-btn">New</button>
                                 <h2 style="margin-top: 0.66rem;">{{event.name}}</h2>
@@ -62,27 +106,7 @@
                             </div>
                         </router-link>
                     </div>
-                    <!-- <div v-for="event in events" class="update-one-card">
-                        <router-link :to="'/event/'+event.id">
-                            <img :src="event.preview?event.preview:'/images/no_img.png'" alt="" style="height: 450px;">
-                            <h2>{{event.name}}</h2>
-                            <p class="description" style="color: #000;" v-html="stringLimit(event.description, 150, true)">
 
-                            </p>
-                            <div class="d-flex justify-content-end">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="19" viewBox="0 0 28 19" fill="none">
-                                    <g clip-path="url(#clip0_265_740)">
-                                        <path d="M27.3371 7.92289C27.2592 7.72203 27.1423 7.53853 26.9934 7.38289L20.448 0.837442C20.2955 0.684871 20.1143 0.563844 19.9148 0.481273C19.7155 0.398701 19.502 0.356201 19.2861 0.356201C18.8504 0.356201 18.4325 0.529308 18.1243 0.837442C17.8162 1.14558 17.6431 1.5635 17.6431 1.99926C17.6431 2.43502 17.8162 2.85295 18.1243 3.16107L21.888 6.90835H2.92249C2.48851 6.90835 2.07229 7.08075 1.76542 7.38764C1.45854 7.6945 1.28613 8.11073 1.28613 8.54471C1.28613 8.97871 1.45854 9.39492 1.76542 9.7018C2.07229 10.0087 2.48851 10.1811 2.92249 10.1811H21.888L18.1243 13.9283C17.971 14.0805 17.8493 14.2615 17.7661 14.4609C17.683 14.6603 17.6403 14.8741 17.6403 15.0902C17.6403 15.3062 17.683 15.5201 17.7661 15.7195C17.8493 15.9189 17.971 16.0999 18.1243 16.252C18.2765 16.4054 18.4575 16.5271 18.6568 16.6102C18.8563 16.6933 19.0701 16.736 19.2861 16.736C19.5021 16.736 19.716 16.6933 19.9155 16.6102C20.1148 16.5271 20.2958 16.4054 20.448 16.252L26.9934 9.70653C27.1423 9.55091 27.2592 9.36739 27.3371 9.16653C27.5007 8.76814 27.5007 8.32128 27.3371 7.92289Z" fill="#0B9F0D" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_265_740">
-                                            <rect width="27.8182" height="18" fill="white" transform="translate(0.0908203 0.25)" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </div>
-                        </router-link>
-                    </div> -->
                 </div>
 
             </div>
@@ -129,6 +153,7 @@ export default {
     methods: {
         getProjects() {
             var headers = new Headers()
+            this.projectSkeleton = true
             headers.append("Authorization", "Token " + this.$root.token);
             fetch(this.api_url + '/wsss/projects/', {
                     method: 'get',
@@ -139,10 +164,12 @@ export default {
                 })
                 .then((jsonData) => {
                     this.projects = jsonData.results
+                    this.projectSkeleton = false
                 })
         },
         getEvents() {
             var headers = new Headers()
+            this.projectSkeleton = true
             headers.append("Authorization", "Token " + this.$root.token);
             fetch(this.api_url + '/wsss/events/', {
                     method: 'get',
@@ -153,6 +180,7 @@ export default {
                 })
                 .then((jsonData) => {
                     this.events = jsonData.results
+                    this.projectSkeleton = false
                 })
         },
         openNav() {
