@@ -9,8 +9,8 @@
                 <template #button-content>
                     <button>Projects
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-  <path d="M16.5716 12.2143L12.0001 16.7857L7.42871 12.2143" stroke="#1E1E1E" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></button>
+                            <path d="M16.5716 12.2143L12.0001 16.7857L7.42871 12.2143" stroke="#1E1E1E" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></button>
                 </template>
                 <div class="custom-dropdown">
                     <div style="padding: 0.625rem 1.5rem;">
@@ -31,8 +31,8 @@
             <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret>
                 <template #button-content>
                     <button>About us <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-  <path d="M16.5716 12.2143L12.0001 16.7857L7.42871 12.2143" stroke="#1E1E1E" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></button>
+                            <path d="M16.5716 12.2143L12.0001 16.7857L7.42871 12.2143" stroke="#1E1E1E" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></button>
                 </template>
                 <div class="custom-dropdown">
                     <div style="padding: 0.625rem 1.5rem;">
@@ -57,8 +57,8 @@
             <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret>
                 <template #button-content>
                     <button>Activities <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-  <path d="M16.5716 12.2143L12.0001 16.7857L7.42871 12.2143" stroke="#1E1E1E" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></button>
+                            <path d="M16.5716 12.2143L12.0001 16.7857L7.42871 12.2143" stroke="#1E1E1E" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></button>
                 </template>
                 <div class="custom-dropdown">
                     <div style="padding: 0.625rem 1.5rem;">

@@ -220,7 +220,7 @@
                 </div>
             </div>
             <img src="/images/green-star.png" class="star" alt="">
-            <div class="updates">
+            <div class="updates w-100">
                 <div class="projects-top">
                     <h1 class="main-title">Updates & Events</h1>
                     <router-link to="/view/events">
@@ -228,6 +228,7 @@
                     </router-link>
                 </div>
                 <div class="update-cards">
+
                     <div v-for="event in events" class="update-one-card">
                         <router-link :to="'/event/'+event.id">
                             <img :src="event.preview?api_url+event.preview:'/images/no_img.png'" alt="">
@@ -237,9 +238,8 @@
                                 <p class="description mt-2" style="color: #000;line-height: 1.75rem;" v-html="stringLimit(event.description, 150, true)">
                                 </p>
                             </div>
-
                             <div class="d-flex align-items-center" style="padding: 0.25rem 1.375rem 2rem 1.375rem;gap: 0.375rem;">
-                                <h6 style="font-size: 1.0625rem;color: #323232;font-weight: ;">Read Now</h6>
+                                <h6 style="font-size: 1.0625rem;color: #323232;font-weight:700 ;">Read Now</h6>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18" fill="none">
                                     <g clip-path="url(#clip0_259_297)">
                                         <path d="M27.3371 7.67289C27.2592 7.47203 27.1423 7.28853 26.9934 7.13289L20.448 0.587442C20.2955 0.434871 20.1143 0.313844 19.9148 0.231273C19.7155 0.148701 19.502 0.106201 19.2861 0.106201C18.8504 0.106201 18.4325 0.279308 18.1243 0.587442C17.8162 0.895576 17.6431 1.3135 17.6431 1.74926C17.6431 2.18502 17.8162 2.60295 18.1243 2.91107L21.888 6.65835H2.92249C2.48851 6.65835 2.07229 6.83075 1.76542 7.13764C1.45854 7.4445 1.28613 7.86073 1.28613 8.29471C1.28613 8.72871 1.45854 9.14492 1.76542 9.4518C2.07229 9.75868 2.48851 9.93107 2.92249 9.93107H21.888L18.1243 13.6783C17.971 13.8305 17.8493 14.0115 17.7661 14.2109C17.683 14.4103 17.6403 14.6241 17.6403 14.8402C17.6403 15.0562 17.683 15.2701 17.7661 15.4695C17.8493 15.6689 17.971 15.8499 18.1243 16.002C18.2765 16.1554 18.4575 16.2771 18.6568 16.3602C18.8563 16.4433 19.0701 16.486 19.2861 16.486C19.5021 16.486 19.716 16.4433 19.9155 16.3602C20.1148 16.2771 20.2958 16.1554 20.448 16.002L26.9934 9.45653C27.1423 9.30091 27.2592 9.11739 27.3371 8.91653C27.5007 8.51814 27.5007 8.07128 27.3371 7.67289Z" fill="#0B9F0D" />
@@ -250,12 +250,7 @@
                                         </clipPath>
                                     </defs>
                                 </svg>
-
                             </div>
-
-                            <!-- <div class="d-flex justify-content-end">
-                                <img src="/images/arrow-right.png" alt="">
-                            </div> -->
                         </router-link>
                     </div>
                 </div>
@@ -268,38 +263,67 @@
                         <div class="d-flex flex-column mt-2" style="padding: 0 0.75rem;gap: 0.5rem;">
                             <h2>BEST PFA (NABARD WADI PROJCET)</h2>
                             <p>06-02-24</p>
-
                         </div>
-
                     </div>
-
+                    <div v-for="index in 10" :key="index" class="one-testimonial">
+                        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                        <div class="d-flex flex-column mt-2" style="padding: 0 0.75rem;gap: 0.5rem;">
+                            <h2>BEST PFA (NABARD WADI PROJCET)</h2>
+                            <p>06-02-24</p>
+                        </div>
+                    </div>
                 </div>
-
             </div>
         </div>
-        <div class="mision-vision">
-            <div class="one-vision">
-                <img src="/images/vision-1.png" alt="">
-                <div class="p-3 d-flex flex-column" style="gap: 0.25rem;">
-                    <h1>Our Vision</h1>
-                    <p>The Society has its Vision stated as “Self reliant and vibrant human communities living in a sustainable environment</p>
-                </div>
-            </div>
-            <div class="one-vision">
-                <img src="/images/mission.png" alt="">
-                <div class="p-3 d-flex flex-column" style="gap: 0.25rem;">
-                    <h1>Our Mission</h1>
-                    <p>Organising and empowering the target groups consisting of small and marginal farmers, women, tribes, youth and children</p>
-                </div>
-            </div>
-            <div class="one-vision">
-                <img src="/images/objective.png" alt="">
-                <div class="p-3 d-flex flex-column" style="gap: 0.25rem;">
-                    <h1>Our Vision</h1>
-                    <p>To ensure and support community based people’s organisations for development interventions.</p>
-                </div>
-            </div>
+        <div class="d-flex  justify-content-center">
 
+            <div class="mision-vision">
+                <div class="one-vision">
+                    <img src="/images/vision-1.png" alt="">
+                    <div class="d-flex " style="gap: 0.25rem;padding: 2.1875rem 1.5rem;gap: 0.9375rem;">
+                        <h6>(1)</h6>
+                        <div class="d-flex align-items-center" style="gap: 0.25rem;">
+                            <div class="d-flex flex-column" style="gap: 0.9375rem;">
+                                <h1>Our vision</h1>
+                                <p>Society's Vision: Self-reliant, vibrant, just, dignified human communities sustainably living in love, solidarity, and equity.</p>
+                            </div>
+                            <svg style="min-width: 3rem;min-height: 3rem;" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none">
+                                <path d="M25.9063 28.0935H13.875V25.906H25.9063V13.8748H28.0938V25.906H40.125V28.0935H28.0938V40.1248H25.9063V28.0935Z" fill="#283618" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="one-vision">
+                    <img src="/images/mission.png" alt="">
+                    <div class="d-flex " style="gap: 0.25rem;padding: 2.1875rem 1.5rem;gap: 0.9375rem;">
+                        <h6>(2)</h6>
+                        <div class="d-flex align-items-center" style="gap: 0.25rem;">
+                            <div class="d-flex flex-column" style="gap: 0.9375rem;">
+                                <h1>Our mission</h1>
+                                <p>Society's Vision: Self-reliant, vibrant, just, dignified human communities sustainably living in love, solidarity, and equity.</p>
+                            </div>
+                            <svg style="min-width: 3rem;min-height: 3rem;" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none">
+                                <path d="M25.9063 28.0935H13.875V25.906H25.9063V13.8748H28.0938V25.906H40.125V28.0935H28.0938V40.1248H25.9063V28.0935Z" fill="#283618" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="one-vision">
+                    <img src="/images/objective.png" alt="">
+                    <div class="d-flex " style="gap: 0.25rem;padding: 2.1875rem 1.5rem;gap: 0.9375rem;">
+                        <h6>(3)</h6>
+                        <div class="d-flex align-items-center" style="gap: 0.25rem;">
+                            <div class="d-flex flex-column" style="gap: 0.9375rem;">
+                                <h1>Our objective</h1>
+                                <p>To ensure and support community based people’s organisations for development interventions.</p>
+                            </div>
+                            <svg style="min-width: 3rem;min-height: 3rem;" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none">
+                                <path d="M25.9063 28.0935H13.875V25.906H25.9063V13.8748H28.0938V25.906H40.125V28.0935H28.0938V40.1248H25.9063V28.0935Z" fill="#283618" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- <div :style="{backgroundColor: sectionBackgroundColor}" class="vision-section">
             <div class="vision-section-left">
@@ -343,7 +367,7 @@
             <div>
             </div>
         </div> -->
-        <div class="donate-section" :style="{background:donateSectionHover ? '#283618' : 'url(/images/donate.gif) center / cover'}" ref="donateSection">
+        <div class="donate-section" :style="{background:donateSectionHover ? '#0B9F0D' : 'url(/images/donate.gif) center / cover'}" ref="donateSection">
             <div class="donate-content">
                 <h1>Let’s end poverty. <br> For good.</h1>
                 <p>By supporting our work, you are helping women and their families access opportunity and build financial security.</p>
