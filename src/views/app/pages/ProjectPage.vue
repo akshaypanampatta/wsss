@@ -1,17 +1,61 @@
 <template>
 <div>
     <Navbar />
-    <div class="project-page">
-        <div class="project-page-top">
+
+    <div>
+        <div class="activity">
             <img class="project-image" :src="form_data.preview?form_data.preview:'/images/no_img.png'" alt="">
-            <div class="black"></div>
-            <img class="play-img" src="/images/play.svg" alt="">
+            <div class="activity-title">
+                <h1>{{form_data.name}}</h1>
+                <!-- <h5>{{form_data.name}}</h5> -->
+                <!-- <button style="background-color: #0B9F0D;color: #FEFAE0;" class="green-btn">For more information contact us ></button> -->
+            </div>
+            <!-- <div class="rotate-box">
+            </div> -->
         </div>
-        <div class="project-page-content">
-            <h1>{{form_data.name}}</h1>
-            <p v-html="form_data.description"></p>
+        <div class="activity-text">
+            <div class="line"></div>
+            <div class="d-flex" style="gap: 5rem;">
+                <div class="activity-des" style="width: 70%;">
+                    <div style="margin-bottom: 1.25rem;" class="green-bg">
+                        <h2>{{dateFormate(form_data.date, true)}}</h2>
+                    </div>
+                    <!-- <h1>{{form_data.name}}</h1> -->
+                    <p v-html="form_data.description"></p>
+                </div>
+                <div class="related-links" style="width: 30%;">
+                    <div class="p-3" style="border-bottom: solid 3px #0B9F0D;">
+                        <h1>Related Links</h1>
+                    </div>
+                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
+                        <a href="">Building back better - women's health, safety, and wellness in spice sector' project</a>
+                    </div>
+                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
+                        <a href="">Micro enterprises development programs (MEDPS)</a>
+                    </div>
+                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
+                        <a href="">Alternative energy and technology development programme</a>
+                    </div>
+                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
+                        <a href="">Sajeevam - Anti-Drug Campaign</a>
+                    </div>
+                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
+                        <a href="">Fashion Designing & Garment Technology</a>
+                    </div>
+                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
+                        <a href="">Medicinal Plants Conservation Park & Botanical Museum</a>
+                    </div>
+                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
+                        <a href="">Shakiranam Cancer Care Campaign</a>
+                    </div>
+                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
+                        <a href="">Nabard Springshed Development Project</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div style="padding-top: 3.88rem;" class="updates">
+        <div style="padding-top: 9rem;" class="updates">
             <div class="projects-top">
                 <h1 class="main-title">Related</h1>
                 <!-- <router-link to="/view/events">
@@ -26,7 +70,7 @@
                             <button style="padding: 0.1875rem 1.5rem;font-size: 1.0625rem;line-height: 1.59375rem" class="pill-btn">New</button>
                             <h2 style="margin-top: 0.66rem;">{{project.name}}</h2>
                             <p class="description mt-2" style="color: #000;line-height: 1.75rem;" v-html="stringLimit(project.description, 150, true)">
-                                
+
                             </p>
                         </div>
 
@@ -45,9 +89,9 @@
 
                         </div>
 
-                    <!-- <div class="d-flex justify-content-end">
+                        <!-- <div class="d-flex justify-content-end">
                                 <img src="/images/arrow-right.png" alt="">
-                            </div> -->
+                         </div> -->
                     </router-link>
                 </div>
             </div>
@@ -73,7 +117,7 @@ export default {
             form_data: {
                 id: this.$route.params.id
             },
-            projects:[],
+            projects: [],
         }
     },
     mounted() {

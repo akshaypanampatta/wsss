@@ -8,8 +8,8 @@
             <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret right="10">
                 <template #button-content>
                     <button>Projects <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-  <path d="M16.5716 12.2144L12.0001 16.7858L7.42871 12.2144" stroke="#1E1E1E" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></button>
+                            <path d="M16.5716 12.2144L12.0001 16.7858L7.42871 12.2144" stroke="#1E1E1E" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></button>
                 </template>
                 <div class="projects-dropdown custom-dropdown">
                     <div class="d-flex flex-wrap">
@@ -101,7 +101,9 @@
             <button>Contact</button>
             <button @click="openNav" class="menu-btn"><img src="/images/menu-2.svg" alt=""></button>
         </div>
-        <button style="background-color: #0B9F0D;color: #fff;" class="green-btn">Donate</button>
+        <a href="https://rzp.io/l/AamDxsS">
+            <button style="background-color: #0B9F0D;color: #fff;" class="green-btn">Donate</button>
+        </a>
 
         <img class="nav-logo-image" src="/images/nav-logo.png" alt="">
 

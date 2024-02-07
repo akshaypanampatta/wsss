@@ -10,33 +10,34 @@
                             <button>Home</button>
                         </router-link>
                         <!-- <router-link class="custom-router" to="/view/projects"> -->
-                        <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret right="10"  >
+                        <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret right="10">
                             <template #button-content>
                                 <button>Projects <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <path d="M16.5716 11.7143L12.0001 16.2857L7.42871 11.7143" stroke="white" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg></button>
+                                    </svg>
+                                </button>
                             </template>
-                            <div  class="projects-dropdown custom-dropdown">
+                            <div class="projects-dropdown custom-dropdown">
                                 <div class="d-flex flex-wrap">
-                                <router-link class="pb-4" :to="'/project/'+project.id" v-for="(project, pk) in projects" v-if="pk<5">
-                                    <span>
-                                        <h4>{{project.name}}</h4>
-                                        <div class="d-flex align-items-center">
-                                            <p>Know more</p>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" fill="#0B9F0D" />
-                                            </svg>
+                                    <router-link class="pb-4" :to="'/project/'+project.id" v-for="(project, pk) in projects" v-if="pk<5">
+                                        <span>
+                                            <h4>{{project.name}}</h4>
+                                            <div class="d-flex align-items-center">
+                                                <p>Know more</p>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" fill="#0B9F0D" />
+                                                </svg>
 
-                                        </div>
-                                    </span>
-                                </router-link>
+                                            </div>
+                                        </span>
+                                    </router-link>
                                 </div>
                                 <div class="d-flex justify-content-between" style="padding: 1.25rem 1.5rem;border-top: solid 1px #c6c6c6;">
-                                    <h4 style="color: #000;font-size: 1.125rem;font-weight: 500;text-decoration: underline;line-height: 1.7rem;">View All Projects</h4>
+                                    <h4 style="color: #000;font-size: 1.125rem;font-weight: 500;text-decoration: underline;line-height: 1.7rem;cursor: pointer;">View All Projects</h4>
                                     <img src="/images/logo-drop.png" alt="">
 
                                 </div>
-                                
+
                             </div>
                         </b-dropdown>
 
@@ -104,7 +105,9 @@
                         <button>Contact</button>
                         <button @click="openNav" class="menu-btn"><img src="/images/menu.svg" alt=""></button>
                     </div>
-                    <button style="background-color: #0B9F0D;color: #fff;" class="donate-btn">Donate</button>
+                    <a href="https://rzp.io/l/AamDxsS">
+                        <button style="background-color: #0B9F0D;color: #fff;" class="donate-btn">Donate</button>
+                    </a>
                 </div>
                 <div class="logo">
                     <img class="nav-logo-2" src="/images/new-logo.png" alt="">
@@ -380,11 +383,15 @@
             <div>
             </div>
         </div> -->
-        <div class="donate-section" :style="{background:donateSectionHover ? '#0B9F0D' : 'url(/images/donate.gif) center / cover'}" ref="donateSection">
+        <!-- :style="{background:donateSectionHover ? '#0B9F0D' : 'url(/images/poverty.jpg) center / cover'}" ref="donateSection" -->
+        <!-- @mouseover="changeDonateSectionBg" @mouseleave="resetDonateSectionBg" -->
+        <div class="donate-section">
             <div class="donate-content">
-                <h1>Let’s end poverty. <br> For good.</h1>
+                <!-- <h1>Let’s end poverty. <br> For good.</h1> -->
                 <p>By supporting our work, you are helping women and their families access opportunity and build financial security.</p>
-                <button @mouseover="changeDonateSectionBg" @mouseleave="resetDonateSectionBg" style="font-size: 1.5rem;" class="donate-btn ">Donate</button>
+                <a href="https://rzp.io/l/AamDxsS">
+                    <button style="font-size: 1.5rem;" class="donate-btn ">Donate</button>
+                </a>
             </div>
         </div>
     </div>

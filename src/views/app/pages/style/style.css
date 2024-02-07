@@ -35,6 +35,7 @@ a:hover {
   background-size: cover;
   background-position: center;
   height: 100vh;
+  background-repeat: no-repeat;
 }
 .banner-image::before {
   content: "";
@@ -587,14 +588,14 @@ line-height:  1.8rem
 
 .donate-section {
   position: relative;
-  background: url("/images/donate.gif");
+  background: url("/images/poverty.jpg");
   background-size: cover;
   background-position: center;
   height: 35rem;
   display: flex;
   justify-content: center;
   width: 100%;
-  border-bottom: solid 1px #fefae0;
+  /* border-bottom: solid 1px #fefae0; */
 }
 
 .donate-content {
@@ -606,17 +607,21 @@ line-height:  1.8rem
   text-align: center;
   width: 70%;
   z-index: 2;
+  position: absolute;
+  bottom: 2rem;
+ 
 }
-.donate-content h1 {
+/* .donate-content h1 {
   color: #fefae0;
   text-align: center;
   font-size: 4.5rem;
   font-weight: 400;
-}
+} */
 .donate-content p {
   color: #fefae0;
   font-size: 1.5rem;
   font-weight: 400;
+   font-family: 'IBM Plex Sans', sans-serif;
 }
 .donate-section::before {
   content: "";
@@ -625,8 +630,9 @@ line-height:  1.8rem
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-color: rgba(0, 0, 0, 0.5);  */
+ background: linear-gradient(0deg, #1E1E1E 0%, rgba(30, 30, 30, 0.00) 82.99%);
   z-index: 1;
+  line-height: 2.31rem;
 }
 
 /* --------FOOTER---------- */
@@ -1087,8 +1093,9 @@ line-height:  1.8rem
 }
 .activity-title h1 {
   color: #000;
-  font-size: 3.5625rem;
+  font-size: 2.6255rem;
   font-weight: 400;
+  max-width: 70%;
 }
 .activity-title h5 {
   color: #343434;
@@ -1125,7 +1132,7 @@ line-height:  1.8rem
   font-family: "IBM Plex Sans", sans-serif;
 }
 .activity-des {
-  padding: 1.2rem 4.5rem 0 4.5rem;
+  padding: 2.6rem 0 0 4.5rem;
 }
 .activity-des p {
   color: #000;
@@ -1135,6 +1142,33 @@ line-height:  1.8rem
   line-height: 2.8125rem;
   margin-top: 0.9375rem;
 }
+.related-links{
+  margin-top: 4.48rem;
+  padding: 0 4.35rem 0 2rem;
+  border-left: solid 1px #cdcdcd;
+}
+.related-links h1{
+font-size: 1.25rem;
+font-weight: 500;
+color: #000;
+margin: 0;
+line-height: normal;
+font-family: "IBM Plex Sans", sans-serif;
+}
+
+.related-links a{
+font-size: 1.125rem;
+font-weight: 400;
+color: #000;
+font-family: "IBM Plex Sans", sans-serif;
+
+}
+
+
+
+
+
+
 .dropdown-menu-right{
   transform: translate3d(-500px, 50px, 0px) !important;
 
