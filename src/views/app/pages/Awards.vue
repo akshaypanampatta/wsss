@@ -58,7 +58,7 @@
                             <h3>Paristhithi Mithra Award, Uzhavoor College</h3>
                         </div>
                         <div>
-                            <p>No text</p>
+                            <p>Paristhithi Mithra is an award instituted by the CEERD, St. Stephen’s College, Uzhavoor every year on June 5th Environment Day. The award is given in recognition of the outstanding contribution towards the promotion of environmental protection, conservation and preservation in the State of Kerala. On this special day Mr.P.A.Jose, Program Officer, WSSS received the Paristhithi Mitra Award  from Sri. Mons Joseph MLA at St. Stephen College, Uzhavoor for raising the awareness level and encouraging positive actions for the environment, galvanizing individual actions into a collective power that generates an exponential positive impact. The award marks the importance of World Environment Day on 5 June and celebrates innovative and outstanding environmental programs and initiatives in and around Kerala, as well as the critical work of environmental leaders.</p>
                         </div>
                     </div>
                     <div class="one-award-left">
@@ -66,45 +66,61 @@
                     </div>
 
                 </div>
-                <div class="one-award">
-                    <div class="one-award-left">
-                        <img src="/images/award5.png" alt="">
-                    </div>
-                    <div class="award-text">
-                        <div class="d-flex align-items-center" style="gap: 1.5rem;">
-                            <img class="badgee" src="/images/badge2.png" alt="">
-                            <h3>Excellence Award: Kerala Social Service Form- 2014</h3>
-                        </div>
-                        <div>
-                            <p>To text</p>
+                <div class="d-flex" style="gap: 3.375rem;border-bottom: solid 1px #d1d1d1;">
+                    <div class="d-flex w-50 flex-column" style="padding: 3.375rem 0;gap: 0.75rem;">
+                        <img style="max-height: 21rem;" src="/images/award5.png" alt="">
+                        <div class="d-flex align-items-center" style="gap: 1.6875rem;">
+                            <img  class="badgee" src="/images/badge2.png" alt="">
+                            <h3 style="font-weight: 400;font-size: 1.5rem;color: #000;">Excellence Award: Kerala Social Service Form- 2014</h3>
                         </div>
                     </div>
-                </div>
-                 <div class="one-award">
-                    <div class="award-text">
-                        <div class="d-flex align-items-center " style="gap: 1.5rem;">
-                            <img class="badgee" src="/images/badge2.png" alt="">
-                            <h3>Best overall performance of State Nodal Agency ( first prize) : Vikaspedia- 2016</h3>
-                        </div>
-                        <div>
-                            <p>No text</p>
+                    <div class="d-flex w-50 flex-column" style="padding: 3.375rem 0;gap: 0.75rem;">
+                          <img style="max-height: 21rem;" src="/images/award6.png" alt="">
+                        <div class="d-flex align-items-center" style="gap: 1.6875rem;">
+                            <img  class="badgee" src="/images/badge2.png" alt="">
+                            <h3 style="font-weight: 400;font-size: 1.5rem;color: #000;">Best overall performance of State Nodal Agency ( first prize) : Vikaspedia- 2016</h3>
                         </div>
                     </div>
-                    <div class="one-award-left">
-                        <img src="/images/award6.png" alt="">
+                    <!-- <div class="one-award flex-column">
+                        <div class="one-award-left">
+                            <img src="/images/award5.png" alt="">
+                        </div>
+                        <div class="award-text">
+                            <div class="d-flex align-items-center" style="gap: 1.5rem;">
+                                <img class="badgee" src="/images/badge2.png" alt="">
+                                <h3>Excellence Award: Kerala Social Service Form- 2014</h3>
+                            </div>
+                            <div>
+                                <p>To text</p>
+                            </div>
+                        </div>
                     </div>
+                    <div class="one-award">
+                        <div class="award-text">
+                            <div class="d-flex align-items-center " style="gap: 1.5rem;">
+                                <img class="badgee" src="/images/badge2.png" alt="">
+                                <h3>Best overall performance of State Nodal Agency ( first prize) : Vikaspedia- 2016</h3>
+                            </div>
+                            <div>
+                                <p>No text</p>
+                            </div>
+                        </div>
+                        <div class="one-award-left">
+                            <img src="/images/award6.png" alt="">
+                        </div>
 
+                    </div> -->
                 </div>
 
             </div>
-            <!-- <div style="padding: 2.625rem 0;border-bottom: solid 1px #d1d1d1;">
-                <h1 style="font-size: 3.5625rem;font-weight: 400;color: #000;">Other Awards</h1>
-            </div> -->
-            <!-- <div v-for="(award,index) in awards" class="other-awards py-4 d-flex align-items-center">
+            <div style="padding: 2.625rem 0;margin-top: 2rem;">
+                <h1 style="font-size: 3.5625rem;font-weight: 400;color: #000;">Recognitions</h1>
+            </div>
+            <div v-for="(award,index) in awards" class="other-awards py-4 d-flex align-items-center">
                 <img src="/images/badge2.png" alt="">
                 <p>{{ award.name }}</p>
             </div>
-            <div style="padding: 2.625rem 0;margin-top: 3.4rem;">
+            <!-- <div style="padding: 2.625rem 0;margin-top: 3.4rem;">
                 <h1 style="font-size: 3.5625rem;font-weight: 400;color: #000;">Recognitions</h1>
             </div>
             <div class="d-flex flex-wrap" style="gap: 0.5rem;">
@@ -133,23 +149,68 @@ export default {
     data() {
         return {
             awards: [{
-                    name: 'Best overall performance of State Nodal Agency ( first prize) : Vikaspedia- 2016',
+                    name: 'Regional Council For Pgs- Ncof-govt. Of India',
                 },
                 {
-                    name: 'Model enterprise (medium scale) : State Pollution Control Board-2016'
+                    name:'Service Provider for Organic Farming: NCOF-Govt. of India'
                 },
-                {
-                    name: 'Best overall performance of State Nodal Agency (second prize) : Vikaspedia- 2015'
+                 {
+                    name:'State Nodal Agency For Vikaspedia Knowledge Portal – Ministry Of Information Technology '
                 },
-                {
-                    name: 'Excellence Award: Kerala Social Service Form- 2014'
+                 {
+                    name:'Program Facilitating Agency for NABARD Women SHG Program, Watershed Program, WADI Program, Farm Club Promotion, JLG Promotion, MEDP, LEDP, CAT, Financial Literacy , FTTF, UPNRM Project, Farmer Producer Organizations & KfW Soil projects.'
                 },
-                {
-                    name: 'Karshik Sevak Puraskar : Sree Maha Genapathy Bhakthajana Sevak- 2013'
+                 {
+                    name:'Program Facilitating Agency of TRIFED'
                 },
-                {
-                    name: 'Best Entrepreneur Award (Wayanad district) : State Industries Department, Kerala - 2012'
+                 {
+                    name:'Service Provider of Tribal Sub Plan Projects'
                 },
+                 {
+                    name:'Program Implementing Agency of NAI ROSHNI Training Program- Ministry of Rural Development'
+                },
+                 {
+                    name:'Program Facilitating Agency of Sammunnathi Project- Corporation for Forward Community.'
+                },
+                 {
+                    name:'Program Implementing Agency of NULM- Ministry of Rural Development'
+                },
+                 {
+                    name:'Program Implementing Agency of Western Ghat Development Projects- Department of Planning & Economic Affairs.'
+                },
+                 {
+                    name:'Service Provider of Sujitwa Mission Kerala'
+                },
+                 {
+                    name:'Supporting Organization of Jalanidhi Project'
+                },
+                 {
+                    name:'Program Implementing Agency- FCT Training, Coconut Dev. Board'
+                },
+                 {
+                    name:'Service Provider of MILMA for Biogas Promotion'
+                },
+                 {
+                    name:'Service Provider of Sustainable Development Agency – SDA'
+                },
+                 {
+                    name:'Service Provider of Andhyodaya - Solar Water Heater, CFL Lamps, Lanterns & DLS'
+                },
+                 {
+                    name:'Service Provider of Khadi & Village Industries Commission'
+                },
+                 {
+                    name:'Master Training Institute for NABARD Krishi Jaldhooth Project'
+                },
+                 {
+                    name:'National Accredited Agency for conducting NABARD rural immersion program'
+                },
+                 {
+                    name:'Consortium Partner for ICAR Projects'
+                },
+                
+
+               
 
             ],
             Recognitions: [{

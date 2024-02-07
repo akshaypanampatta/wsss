@@ -975,8 +975,8 @@ line-height:  1.8rem
   width: 60%;
 }
 .badgee {
-  width: 4.35938rem;
-  height: 5.57813rem;
+  width: 2.625rem;
+height: 3.35888rem;
 }
 .award-text h3 {
   color: #000;
@@ -1002,8 +1002,8 @@ line-height:  1.8rem
   gap: 1.6875rem;
 }
 .other-awards img {
-  width: 4.35938rem;
-  height: 5.57813rem;
+ width: 2.625rem;
+height: 3.35888rem;
 }
 .other-awards p {
   font-size: 1.5rem;
@@ -1377,7 +1377,7 @@ line-height:  1.8rem
   padding: 4rem 6.5rem 5rem 6.5rem;
   background-color: #fff;
 }
-.partners h1{
+.team h1{
   font-weight: 400;
   font-size: 2.625rem;
   color: #000;
