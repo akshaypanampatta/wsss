@@ -67,6 +67,10 @@ const routes = [
             path: "wsss-team",
             component: () => import("./views/app/pages/Team"),
           },
+          {
+            path: "gallery",
+            component: () => import("./views/app/pages/Gallery"),
+          },
         ],
       },
     ],
