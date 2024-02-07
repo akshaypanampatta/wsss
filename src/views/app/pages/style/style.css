@@ -389,13 +389,8 @@ a:hover {
 
 /* ----------TESTIMONIALS------------ */
 
-.testimonials {
-  padding: 2rem 0 0 0;
-  background-color: #fff;
-}
-.testimonials-list {
-  padding: 1.8rem 0 4.25rem 0;
-}
+
+
 
 @keyframes slideLeft {
   0% {
@@ -1170,6 +1165,9 @@ line-height:  1.8rem
 .dropdown-menu-right {
   transform: translate3d(-500px, 50px, 0px) !important;
 }
+/* .dropdown-menu-left {
+  transform: translate3d(100px, 50px, 0px) !important;
+} */
 .dropdown-menu {
   min-width: 14.875rem;
   border-radius: 0.75rem;
@@ -1371,6 +1369,60 @@ line-height:  1.8rem
   font-family: "IBM Plex Sans", sans-serif;
   text-align: center;
 
+}
+
+/* ----------TEAM--------- */
+
+.team {
+  padding: 4rem 6.5rem 5rem 6.5rem;
+  background-color: #fff;
+}
+.partners h1{
+  font-weight: 400;
+  font-size: 2.625rem;
+  color: #000;
+  line-height: 2.7rem;
+  text-align: center;
+  margin-bottom: 2.8rem;
+}
+.one-person{
+  width: 14.375rem;
+height: 19.3125rem;
+position: relative;
+margin-bottom: 0.75rem;
+
+}
+.one-person img{
+    width: 14.375rem;
+height: 19.3125rem;
+}
+.one-person::before{
+width: 14.375rem;
+height: 19.3125rem;
+position: absolute;
+content: '';
+background: linear-gradient(0deg, #000 2.72%, rgba(0, 0, 0, 0.00) 77.95%);
+
+}
+.one-person-text h3{
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #fff;
+  line-height: 1.545rem;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.one-person-text{
+  position: absolute;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 100;
+}
+.one-person-text h4{
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #fff;
+  line-height:0.9rem;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 @media (max-width: 1200px) {

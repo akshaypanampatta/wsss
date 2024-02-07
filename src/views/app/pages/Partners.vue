@@ -3,7 +3,6 @@
     <Navbar />
     <div class="partners d-flex flex-column " >
         <h1>Partners in development</h1>
-
         <div class="d-flex justify-content-center flex-wrap" style="gap: 1.25rem;">
             <div v-for="partner in Partners" class="one-partner">
                 <div class="one-partner-top">
@@ -13,9 +12,7 @@
                     <p>{{ partner.name }}</p>
                 </div>
             </div>
-
         </div>
-
     </div>
     <Footer />
 </div>

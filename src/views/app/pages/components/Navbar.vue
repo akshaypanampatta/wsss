@@ -49,20 +49,24 @@
                             <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">History</h4>
                         </div>
                     </router-link>
-                    <div style="padding: 0.625rem 1.5rem;">
-                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Partners in Development</h4>
-                    </div>
+                    <router-link to="/partners">
+                        <div style="padding: 0.625rem 1.5rem;">
+                            <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Partners in Development</h4>
+                        </div>
+                    </router-link>
                     <div style="padding: 0.625rem 1.5rem;">
                         <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Consultancy Services</h4>
                     </div>
-                    <router-link to="annual-reports" class="custom-router">
+                    <router-link to="/annual-reports" class="custom-router">
                         <div style="padding: 0.625rem 1.5rem;">
                             <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Annual Reports & Audit Statements</h4>
                         </div>
                     </router-link>
-                    <div style="padding: 0.625rem 1.5rem;">
-                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Wsss Team</h4>
-                    </div>
+                    <router-link to="/wsss-team">
+                        <div style="padding: 0.625rem 1.5rem;">
+                            <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Wsss Team</h4>
+                        </div>
+                    </router-link>
                     <div style="padding: 0.625rem 1.5rem;">
                         <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Career</h4>
                     </div>

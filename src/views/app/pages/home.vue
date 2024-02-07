@@ -10,7 +10,7 @@
                             <button>Home</button>
                         </router-link>
                         <!-- <router-link class="custom-router" to="/view/projects"> -->
-                        <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret right="10">
+                        <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret right="0">
                             <template #button-content>
                                 <button>Projects <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <path d="M16.5716 11.7143L12.0001 16.2857L7.42871 11.7143" stroke="white" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round" />
@@ -72,15 +72,19 @@
                                         <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Annual Reports & Audit Statements</h4>
                                     </div>
                                 </router-link>
-                                <div style="padding: 0.625rem 1.5rem;">
-                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Wsss Team</h4>
-                                </div>
+                                <router-link to="wsss-team">
+                                    <div style="padding: 0.625rem 1.5rem;">
+                                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Wsss Team</h4>
+                                    </div>
+                                </router-link>
                                 <div style="padding: 0.625rem 1.5rem;">
                                     <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Career</h4>
                                 </div>
-                                <div style="padding: 0.625rem 1.5rem;">
-                                    <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">ERP Login</h4>
-                                </div>
+                                <a href="https://wsssindia.in/erp-login">
+                                    <div style="padding: 0.625rem 1.5rem;">
+                                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">ERP Login</h4>
+                                    </div>
+                                </a>
 
                             </div>
                         </b-dropdown>
@@ -89,19 +93,38 @@
                         </router-link>
                         <button>Gallery</button>
                         <!-- <router-link class="custom-router" to="/activities"> -->
-                        <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret>
+                        <b-dropdown variant="link" toggle-class="text-decoration-none" left="0" no-caret>
                             <template #button-content>
                                 <button>Activities <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <path d="M16.5716 11.7143L12.0001 16.2857L7.42871 11.7143" stroke="white" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg></button>
                             </template>
-                            <div class="custom-dropdown">
+                            <div class="projects-dropdown custom-dropdown">
+                                <div class="d-flex flex-wrap">
+                                    <router-link class="pb-4" :to="'/event/'+event.id" v-for="event in events">
+                                        <span>
+                                            <h4>{{event.name}}</h4>
+                                            <div class="d-flex align-items-center">
+                                                <p>Know more</p>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" fill="#0B9F0D" />
+                                                </svg>
+                                            </div>
+                                        </span>
+                                    </router-link>
+                                </div>
+                                <div class="d-flex justify-content-between" style="padding: 1.25rem 1.5rem;border-top: solid 1px #c6c6c6;">
+                                    <h4 style="color: #000;font-size: 1.125rem;font-weight: 500;text-decoration: underline;line-height: 1.7rem;cursor: pointer;">View All Projects</h4>
+                                    <img src="/images/logo-drop.png" alt="">
+                                </div>
+                            </div>
+                            <!-- <div class="custom-dropdown">
                                 <router-link :to="'/event/'+event.id" v-for="event in events">
                                     <div style="padding: 0.625rem 1.5rem;">
                                         <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">{{event.name}}</h4>
                                     </div>
                                 </router-link>
-                            </div>
+                            </div> -->
                         </b-dropdown>
                         <!-- </router-link> -->
                         <button>Contact</button>
