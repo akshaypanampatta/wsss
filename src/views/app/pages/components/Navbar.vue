@@ -13,21 +13,22 @@
                 </template>
                 <div class="projects-dropdown custom-dropdown">
                     <div class="d-flex flex-wrap">
-                        <router-link to="" v-for="index in 6" class="pb-4">
+                        <router-link class="pb-4" :to="'/project/'+project.id" v-for="(project, pk) in projects" v-if="pk<5">
                             <span>
-                                <h4>Project 1</h4>
+                                <h4>{{project.name}}</h4>
                                 <div class="d-flex align-items-center">
                                     <p>Know more</p>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" fill="#0B9F0D" />
                                     </svg>
-
                                 </div>
                             </span>
                         </router-link>
                     </div>
                     <div class="d-flex justify-content-between" style="padding: 1.25rem 1.5rem;border-top: solid 1px #c6c6c6;">
-                        <h4 style="color: #000;font-size: 1.125rem;font-weight: 500;text-decoration: underline;line-height: 1.7rem;">View All Projects</h4>
+                        <router-link to="/view/projects">
+                            <h4 style="color: #000;font-size: 1.125rem;font-weight: 500;text-decoration: underline;line-height: 1.7rem;cursor: pointer;">View All Projects</h4>
+                        </router-link>
                         <img src="/images/logo-drop.png" alt="">
 
                     </div>
@@ -41,22 +42,22 @@
                         </svg></button>
                 </template>
                 <div class="custom-dropdown">
-                    <div style="padding: 0.625rem 1.5rem;">
+                    <!-- <div style="padding: 0.625rem 1.5rem;">
                         <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Initiatives</h4>
-                    </div>
-                    <router-link to="/history" class="custom-router">
+                    </div> -->
+                    <!-- <router-link to="/history" class="custom-router">
                         <div style="padding: 0.625rem 1.5rem;">
                             <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">History</h4>
                         </div>
-                    </router-link>
+                    </router-link> -->
                     <router-link to="/partners">
                         <div style="padding: 0.625rem 1.5rem;">
                             <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Partners in Development</h4>
                         </div>
                     </router-link>
-                    <div style="padding: 0.625rem 1.5rem;">
+                    <!-- <div style="padding: 0.625rem 1.5rem;">
                         <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Consultancy Services</h4>
-                    </div>
+                    </div> -->
                     <router-link to="/annual-reports" class="custom-router">
                         <div style="padding: 0.625rem 1.5rem;">
                             <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Annual Reports & Audit Statements</h4>
@@ -67,12 +68,15 @@
                             <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Wsss Team</h4>
                         </div>
                     </router-link>
-                    <div style="padding: 0.625rem 1.5rem;">
+                    <!-- <div style="padding: 0.625rem 1.5rem;">
                         <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Career</h4>
-                    </div>
-                    <div style="padding: 0.625rem 1.5rem;">
-                        <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">ERP Login</h4>
-                    </div>
+                    </div> -->
+
+                    <router-link to="/erp-login">
+                        <div style="padding: 0.625rem 1.5rem;">
+                            <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">ERP Login</h4>
+                        </div>
+                    </router-link>
 
                 </div>
             </b-dropdown>
@@ -82,37 +86,41 @@
             <router-link to="/gallery" class="custom-router">
                 <button>Gallery</button>
             </router-link>
-            <b-dropdown variant="link"  toggle-class="text-decoration-none"  class="activity-drop" no-caret >
-                            <template #button-content>
-                                <button>Activities <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <b-dropdown variant="link" toggle-class="text-decoration-none" class="activity-drop" no-caret>
+                <template #button-content>
+                    <button>Activities <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                             <path d="M16.5716 12.2143L12.0001 16.7857L7.42871 12.2143" stroke="#1E1E1E" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round" />
                         </svg></button>
-                            </template>
-                            <div class="projects-dropdown custom-dropdown">
-                                <div class="d-flex flex-wrap">
-                                    <router-link class="pb-4" to="" >
-                                        <span>
-                                            <h4>Activity 1</h4>
-                                            <div class="d-flex align-items-center">
-                                                <p>Know more</p>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                    <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" fill="#0B9F0D" />
-                                                </svg>
-                                            </div>
-                                        </span>
-                                    </router-link>
+                </template>
+                <div class="projects-dropdown custom-dropdown">
+                    <div class="d-flex flex-wrap">
+                        <router-link class="pb-4" :to="'/event/'+event.id" v-for="event in events">
+                            <span>
+                                <h4>{{event.name}}</h4>
+                                <div class="d-flex align-items-center">
+                                    <p>Know more</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" fill="#0B9F0D" />
+                                    </svg>
                                 </div>
-                                <div class="d-flex justify-content-between" style="padding: 1.25rem 1.5rem;border-top: solid 1px #c6c6c6;">
-                                    <h4 style="color: #000;font-size: 1.125rem;font-weight: 500;text-decoration: underline;line-height: 1.7rem;cursor: pointer;">View All Projects</h4>
-                                    <img src="/images/logo-drop.png" alt="">
-                                </div>
-                            </div>
-                            
-                        </b-dropdown>
-            <button>Contact</button>
+                            </span>
+                        </router-link>
+                    </div>
+                    <div class="d-flex justify-content-between" style="padding: 1.25rem 1.5rem;border-top: solid 1px #c6c6c6;">
+                        <router-link to="/view/events">
+                            <h4 style="color: #000;font-size: 1.125rem;font-weight: 500;text-decoration: underline;line-height: 1.7rem;cursor: pointer;">View All Activities</h4>
+                        </router-link>
+                        <img src="/images/logo-drop.png" alt="">
+                    </div>
+                </div>
+
+            </b-dropdown>
+            <router-link to="contact-us" class="custom-router">
+                <button>Contact</button>
+            </router-link>
             <button @click="openNav" class="menu-btn"><img src="/images/menu-2.svg" alt=""></button>
         </div>
-        <a href="https://rzp.io/l/AamDxsS">
+        <a href="https://rzp.io/l/AamDxsS" target="_blank">
             <button style="background-color: #0B9F0D;color: #fff;" class="green-btn">Donate</button>
         </a>
 
@@ -174,8 +182,13 @@ export default {
     name: "Navbar",
     data() {
         return {
-            showMobileNav: false
+            showMobileNav: false,
+            projects: [],
+            events: [],
         }
+    },
+    mounted() {
+        this.getHomeData()
     },
     methods: {
         openNav() {
@@ -183,7 +196,22 @@ export default {
         },
         closeNav() {
             this.showMobileNav = false;
-        }
+        },
+        getHomeData() {
+            var headers = new Headers()
+            headers.append("Authorization", "Token " + this.$root.token);
+            fetch(this.api_url + '/wsss/home_data/', {
+                    method: 'get',
+                    headers: headers,
+                })
+                .then((response) => {
+                    return response.json()
+                })
+                .then((jsonData) => {
+                    this.projects = jsonData.projects
+                    this.events = jsonData.events
+                })
+        },
 
     },
 }

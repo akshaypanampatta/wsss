@@ -27,30 +27,11 @@
                     <div class="p-3" style="border-bottom: solid 3px #0B9F0D;">
                         <h1>Related Links</h1>
                     </div>
-                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
-                        <a href="">Building back better - women's health, safety, and wellness in spice sector' project</a>
-                    </div>
-                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
-                        <a href="">Micro enterprises development programs (MEDPS)</a>
-                    </div>
-                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
-                        <a href="">Alternative energy and technology development programme</a>
-                    </div>
-                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
-                        <a href="">Sajeevam - Anti-Drug Campaign</a>
-                    </div>
-                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
-                        <a href="">Fashion Designing & Garment Technology</a>
-                    </div>
-                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
-                        <a href="">Medicinal Plants Conservation Park & Botanical Museum</a>
-                    </div>
-                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
-                        <a href="">Shakiranam Cancer Care Campaign</a>
-                    </div>
-                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
-                        <a href="">Nabard Springshed Development Project</a>
-                    </div>
+                    <router-link v-for="(project,key) in projects" v-if="form_data.id!=project.id && key<10" :to="'/project/'+project.id">
+                        <div class="related-links-list" style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
+                            <a href="">{{project.name}}</a>
+                        </div>
+                    </router-link>
                 </div>
             </div>
 
@@ -63,7 +44,7 @@
                 </router-link> -->
             </div>
             <div style="padding-bottom: 4rem;" class="update-cards">
-                <div v-for="project in projects" class="update-one-card">
+                <div v-for="project in projects" class="update-one-card" v-if="form_data.id!=project.id">
                     <router-link :to="'/project/'+project.id">
                         <img :src="project.preview?project.preview:'/images/no_img.png'" alt="">
                         <div style="padding: 1.13rem 1.25rem 2.13rem 1.37rem;">
@@ -121,10 +102,17 @@ export default {
         }
     },
     mounted() {
-        this.getProject()
-        this.relatedProjects()
+        this.changeURL()
+    },
+    watch: {
+        '$route': 'changeURL'
     },
     methods: {
+        changeURL(){
+            this.form_data.id = this.$route.params.id
+            this.getProject()
+            this.relatedProjects()
+        },
         getProject() {
             var headers = new Headers()
             headers.append("Authorization", "Token " + this.$root.token);

@@ -71,6 +71,14 @@ const routes = [
             path: "gallery",
             component: () => import("./views/app/pages/Gallery"),
           },
+          {
+            path: "erp-login",
+            component: () => import("./views/app/pages/erp-login"),
+          },
+          {
+            path: "contact-us",
+            component: () => import("./views/app/pages/ContactUs"),
+          },
         ],
       },
     ],

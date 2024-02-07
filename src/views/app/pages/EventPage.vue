@@ -27,30 +27,11 @@
                     <div class="p-3" style="border-bottom: solid 3px #0B9F0D;">
                         <h1>Related Links</h1>
                     </div>
-                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
-                        <a href="">Building back better - women's health, safety, and wellness in spice sector' project</a>
-                    </div>
-                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
-                        <a href="">Micro enterprises development programs (MEDPS)</a>
-                    </div>
-                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
-                        <a href="">Alternative energy and technology development programme</a>
-                    </div>
-                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
-                        <a href="">Sajeevam - Anti-Drug Campaign</a>
-                    </div>
-                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
-                        <a href="">Fashion Designing & Garment Technology</a>
-                    </div>
-                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
-                        <a href="">Medicinal Plants Conservation Park & Botanical Museum</a>
-                    </div>
-                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
-                        <a href="">Shakiranam Cancer Care Campaign</a>
-                    </div>
-                    <div style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
-                        <a href="">Nabard Springshed Development Project</a>
-                    </div>
+                    <router-link v-for="(event,key) in events" v-if="event.id!=form_data.id && key<10"  :to="'/event/'+event.id">
+                        <div class="related-links-list" style="padding: 0.75rem 0.5rem;border-bottom: solid 1px #cdcdcd;">
+                            <a href="">{{event.name}}</a>
+                        </div>
+                    </router-link>
                 </div>
 
             </div>
@@ -63,13 +44,13 @@
                 </router-link> -->
             </div>
             <div style="padding-bottom: 4rem;" class="update-cards">
-                <div v-for="project in projects" class="update-one-card">
-                    <router-link :to="'/project/'+project.id">
-                        <img :src="project.preview?project.preview:'/images/no_img.png'" alt="">
+                <div v-for="event in events" v-if="event.id!=form_data.id" class="update-one-card">
+                    <router-link :to="'/event/'+event.id">
+                        <img :src="event.preview?event.preview:'/images/no_img.png'" alt="">
                         <div style="padding: 1.13rem 1.25rem 2.13rem 1.37rem;">
                             <button style="padding: 0.1875rem 1.5rem;font-size: 1.0625rem;line-height: 1.59375rem" class="pill-btn">New</button>
-                            <h2 style="margin-top: 0.66rem;">{{project.name}}</h2>
-                            <p class="description mt-2" style="color: #000;line-height: 1.75rem;" v-html="stringLimit(project.description, 150, true)">
+                            <h2 style="margin-top: 0.66rem;">{{event.name}}</h2>
+                            <p class="description mt-2" style="color: #000;line-height: 1.75rem;" v-html="stringLimit(event.description, 150, true)">
 
                             </p>
                         </div>
@@ -117,12 +98,21 @@ export default {
             form_data: {
                 id: this.$route.params.id
             },
+            events : [],
         }
     },
     mounted() {
-        this.getEvent()
+        this.changeURL()
+    },
+    watch: {
+        '$route': 'changeURL'
     },
     methods: {
+        changeURL(){
+            this.form_data.id = this.$route.params.id
+            this.getEvent()
+            this.relatedEvents()
+        },
         getEvent() {
             var headers = new Headers()
             headers.append("Authorization", "Token " + this.$root.token);
@@ -136,7 +126,21 @@ export default {
                 .then((jsonData) => {
                     this.form_data = jsonData
                 })
-        }
+        },
+        relatedEvents() {
+            var headers = new Headers()
+            headers.append("Authorization", "Token " + this.$root.token);
+            fetch(this.api_url + '/wsss/events/?page=1', {
+                    method: 'get',
+                    headers: headers,
+                })
+                .then((response) => {
+                    return response.json()
+                })
+                .then((jsonData) => {
+                    this.events = jsonData.results
+                })
+        },
     }
 }
 </script>
