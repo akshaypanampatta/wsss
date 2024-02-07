@@ -59,6 +59,10 @@ const routes = [
             path: "testimonial/:id",
             component: () => import("./views/app/pages/Testimonial"),
           },
+          {
+            path: "partners",
+            component: () => import("./views/app/pages/Partners"),
+          },
         ],
       },
     ],
