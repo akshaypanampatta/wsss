@@ -115,7 +115,7 @@
                 </div>
 
             </b-dropdown>
-            <router-link to="contact-us" class="custom-router">
+            <router-link to="/contact-us" class="custom-router">
                 <button>Contact</button>
             </router-link>
             <button @click="openNav" class="menu-btn"><img src="/images/menu-2.svg" alt=""></button>
