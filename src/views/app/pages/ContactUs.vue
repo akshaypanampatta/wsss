@@ -5,9 +5,23 @@
         <div class="contact-left w-50">
             <h1>You require any further details please use the form below and we will be in touch with you shortly...</h1>
             <p>Wayanad Social Service Society (WSSS) is a registered charitable society Registered under Charitable Societies Registration Act of 1860 and a secular voluntary organization established in the year 1974.</p>
+            <div class="d-flex flex-column" style="gap: 0.5rem;">
+                <h2>Address</h2>
+                <h6>WSSS P.B.No.16,
+                    <br>
+                    Mananthavady,Wayanad
+                    <br>
+                    Kerala,India
+                    <br>
+                    Pin: 670645
+                    <br>
+                    Phone : 04935240314
+                    <br>
+                    Email: info@wsssindia.in</h6>
+            </div>
 
         </div>
-         <div class="contact-right w-50">
+        <div class="contact-right w-50">
             <h1 class="mb-4">Contact Us</h1>
             <form class="d-flex flex-column" style="gap: 0.875rem;" action="">
                 <div class="d-flex flex-column" style="gap: 0.25rem;">
@@ -25,8 +39,7 @@
                 <button>Send Message</button>
             </form>
 
-
-         </div>
+        </div>
 
     </div>
     <Footer />

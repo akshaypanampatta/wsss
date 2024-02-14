@@ -2,32 +2,42 @@
 <div>
     <Navbar />
     <div class="gallery">
-        <h1>Gallery</h1>
-        <div class="gallery-container">
+        <div style="border-bottom: solid 2px #000;width: fit-content;" class="py-3 px-2">
+            <h1>Gallery</h1>
+        </div>
+        <div style="padding: 0.75rem 0.5rem;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+
+        </div>
+        <div style="margin-top: 2.1rem;gap: 2rem;" class="d-flex flex-wrap">
+            <div v-for="index in 9" class="gallery-card d-flex flex-column">
+                <h1>Headline</h1>
+                <img src='/images/8.jfif' alt="">
+                <h6>Indo German Social Service Society.(IGSSS)</h6>
+            </div>
+
+        </div>
+
+        <!-- <div class="gallery-container">
             <div class="gallery-top" ref="gallery">
                 <img v-for="(gallery,index) in GalleryTop" :src="gallery.image" :key="index" alt="">
                 <img v-for="(gallery,index) in GalleryTop" :src="gallery.image" :key="index" alt="">
-
             </div>
         </div>
         <div style="margin-top: 2.25rem;" class="gallery-container">
-    <div class="gallery-center" ref="gallery">
-        
-        <img v-for="(gallery,index) in GalleryCenter.slice(-2)" :src="gallery.image" :key="'center-duplicate-' + index" alt="">
-        <img v-for="(gallery,index) in GalleryCenter" :src="gallery.image" :key="'center-' + index" alt="">
-        
-        <img v-for="(gallery,index) in GalleryCenter.slice(0, 2)" :src="gallery.image" :key="'center-duplicate-' + index" alt="">
-    </div>
-</div>
+            <div class="gallery-center" ref="gallery">
+                <img v-for="(gallery,index) in GalleryCenter.slice(-2)" :src="gallery.image" :key="'center-duplicate-' + index" alt="">
+                <img v-for="(gallery,index) in GalleryCenter" :src="gallery.image" :key="'center-' + index" alt="">
+                <img v-for="(gallery,index) in GalleryCenter.slice(0, 2)" :src="gallery.image" :key="'center-duplicate-' + index" alt="">
+            </div>
+        </div>
         <div style="margin-top: 2.25rem;" class="gallery-top" ref="gallery">
             <div class="gallery-top" ref="gallery">
                 <img v-for="(gallery,index) in GalleryBottom" :src="gallery.image" :key="index" alt="">
                 <img v-for="(gallery,index) in GalleryBottom" :src="gallery.image" :key="index" alt="">
             </div>
-        </div>
-
+        </div> -->
     </div>
-
     <Footer />
 
 </div>

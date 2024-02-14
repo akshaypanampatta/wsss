@@ -302,7 +302,6 @@
             <div class="testimonials" style="background-color: #fff;">
                 <h1>Testimonials</h1>
                 <div class="d-flex testimonials-list" style="gap: 1.5rem;overflow-x: auto;">
-
                     <div v-for="testimonial in testimonials" :key="index" class="one-testimonial">
                         <router-link :to="'/testimonial/'+testimonial.id" class="custom-router">
                             <img :src="testimonial.preview?api_url+testimonial.preview:'/images/no_img.png'" alt="">
@@ -312,7 +311,6 @@
                             </div>
                         </router-link>
                     </div>
-
                 </div>
             </div>
         </div>

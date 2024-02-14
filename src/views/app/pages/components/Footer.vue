@@ -59,8 +59,14 @@
         </div>
         <div class="footer-top-right">
             <h2>Address</h2>
-            <p>WSSS P.B.No.16, Mananthavady-670645,</p>
-            <p>Wayanad,Kerala,India</p>
+            <p>WSSS P.B.No.16,
+            </p>
+            <p>Mananthavady,Wayanad</p>
+            <p>Kerala,India
+            </p>
+            <p>Pin: 670645</p>
+            <p>Phone : 04935240314</p>
+            <p>Email: info@wsssindia.in </p>
         </div>
 
     </div>
