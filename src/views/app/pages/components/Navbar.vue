@@ -45,11 +45,11 @@
                     <!-- <div style="padding: 0.625rem 1.5rem;">
                         <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Initiatives</h4>
                     </div> -->
-                    <!-- <router-link to="/history" class="custom-router">
+                    <router-link to="/history" class="custom-router">
                         <div style="padding: 0.625rem 1.5rem;">
                             <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">History</h4>
                         </div>
-                    </router-link> -->
+                    </router-link>
                     <router-link to="/partners">
                         <div style="padding: 0.625rem 1.5rem;">
                             <h4 class="sub-title" style="font-size: 1rem;color: #202020;line-height: 1.5rem;">Partners in Development</h4>

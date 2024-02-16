@@ -10,7 +10,7 @@
 
         </div>
         <div style="margin-top: 2.1rem;gap: 2rem;" class="d-flex flex-wrap">
-            <div v-for="index in 9" class="gallery-card d-flex flex-column">
+            <div v-for="photo in photos" class="gallery-card d-flex flex-column">
                 <h1>Headline</h1>
                 <img src='/images/8.jfif' alt="">
                 <h6>Indo German Social Service Society.(IGSSS)</h6>
@@ -51,6 +51,7 @@ export default {
     name: "Gallery",
     data() {
         return {
+            photos:[],
             GalleryTop: [{
                     image: '/images/1-1.jpg'
                 },
@@ -105,7 +106,23 @@ export default {
     components: {
         Navbar,
         Footer
-    }
+    },
+    methods: {
+        getPhotos() {
+        var headers = new Headers();
+        headers.append("Authorization", "Token "+this.$root.token);
+        fetch(this.api_url+'/wsss/all_photos/', {
+            method : 'get',
+            headers: headers,
+        })
+        .then((response) => {
+            return response.json()
+        })
+        .then((jsonData) => {
+            this.photos = jsonData
+        })
+    },
+    },
 }
 </script>
 
