@@ -11,9 +11,9 @@
         </div>
         <div style="margin-top: 2.1rem;gap: 2rem;" class="d-flex flex-wrap">
             <div v-for="photo in photos" class="gallery-card d-flex flex-column">
-                <h1>Headline</h1>
-                <img :src='photo.thumbnail' alt="">
-                <h6>Indo German Social Service Society.(IGSSS)</h6>
+                <h1>{{photo.name}}</h1>
+                <img :src="photo.preview?api_url+photo.preview:'/images/no_img.png'" alt="">
+                <h6>{{dateFormate(photo.date, true)}}</h6>
             </div>
 
         </div>
@@ -49,6 +49,10 @@ import Footer from './components/Footer.vue';
 
 export default {
     name: "Gallery",
+    components: {
+        Navbar,
+        Footer
+    },
     data() {
         return {
             photos: [],
@@ -102,10 +106,8 @@ export default {
             ],
         }
     },
-
-    components: {
-        Navbar,
-        Footer
+    mounted(){
+        this.getPhotos()
     },
     methods: {
         getPhotos() {

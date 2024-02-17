@@ -36,7 +36,7 @@
                         <ul v-if="history.description && history.description.length > 0">
                             <li v-for="dec in history.description">{{ dec }}</li>
                         </ul>
-                        <h3 v-else-if><span>{{ history.subtitle }}</span> {{ history.text }}</h3>
+                        <h3 v-else><span>{{ history.subtitle }}</span> {{ history.text }}</h3>
                     </div>
                 </div>
 
@@ -54,7 +54,7 @@
                         <ul v-if="history.description && history.description.length > 0">
                             <li v-for="dec in history.description">{{ dec }}</li>
                         </ul>
-                        <h3 v-else-if><span>{{ history.subtitle }}</span> {{ history.text }}</h3>
+                        <h3 v-else><span>{{ history.subtitle }}</span> {{ history.text }}</h3>
                     </div>
                 </div>
 
@@ -72,7 +72,7 @@
                         <ul v-if="history.description && history.description.length > 0">
                             <li v-for="dec in history.description">{{ dec }}</li>
                         </ul>
-                        <h3 v-else-if><span>{{ history.subtitle }}</span> {{ history.text }}</h3>
+                        <h3 v-else><span>{{ history.subtitle }}</span> {{ history.text }}</h3>
                     </div>
                 </div>
 
@@ -90,7 +90,7 @@
                         <ul v-if="history.description && history.description.length > 0">
                             <li v-for="dec in history.description">{{ dec }}</li>
                         </ul>
-                        <h3 v-else-if><span>{{ history.subtitle }}</span> {{ history.text }}</h3>
+                        <h3 v-else><span>{{ history.subtitle }}</span> {{ history.text }}</h3>
                     </div>
                 </div>
 
@@ -108,7 +108,7 @@
                         <ul v-if="history.description && history.description.length > 0">
                             <li v-for="dec in history.description">{{ dec }}</li>
                         </ul>
-                        <h3 v-else-if><span>{{ history.subtitle }}</span> {{ history.text }}</h3>
+                        <h3 v-else><span>{{ history.subtitle }}</span> {{ history.text }}</h3>
                     </div>
                 </div>
 
@@ -141,7 +141,7 @@ export default {
                         'Started plant nursery near bishops house for providing quality seedlings to the farmers in the wayanad district'
                     ],
                     images: [{
-                        img: '/images/history/1974_1978_1.jpg',
+                        img: '/history/1974_1978_1.jpg',
                         year: '1974'
                     }],
 
@@ -153,12 +153,12 @@ export default {
                         'Family sponsorship program with the support of safp'
                     ],
                     images: [{
-                            img: '/images/history/1978_83_1.jpg',
+                            img: '/history/1978_83_1.jpg',
                             year: '1974 - 1978'
 
                         },
                         {
-                            img: '/images/history/1978_83_2.jpg',
+                            img: '/history/1978_83_2.jpg',
                             year: '1974 - 1978'
                         }
                     ],
@@ -168,7 +168,7 @@ export default {
                     title: '',
 
                     images: [{
-                        img: '/images/history/1978a.jpg',
+                        img: '/history/1978a.jpg',
                         year: '1978'
                     }],
                     text: 'Comprehensive socio-economic survey of the North Wayanad region was conducted with the financial assistance of MISEREOR'
@@ -178,7 +178,7 @@ export default {
                     title: '',
 
                     images: [{
-                        img: '/images/history/1978a.jpg',
+                        img: '/history/1978a.jpg',
                         year: '1978 - 1983'
                     }],
                     text: 'This period could be considered as a high water mark in the history of Wayanad Social Service Society, during which burning issues like human rights, mobilization of tribals, Non Formal Education programme, unionization of tea estate workers, conscientisation and awareness building among the oppressed and deprived sections of society like tribals and women, and struggles like the Gudallur anti-eviction action were taken up actively.'
@@ -186,7 +186,7 @@ export default {
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/1978a.jpg',
+                        img: '/history/1978a.jpg',
                         year: '1983 - 1985'
                     }],
                     text: 'Organisation of the marginal and small farmers became an unavoidable necessity. This was because it was realized more and more that the genuine development of the people of Wayanad, whose vast majority belong to the agricultural community, can be attained only through the betterment of the socio-economic status of the farmers.',
@@ -195,35 +195,35 @@ export default {
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/1983_85_1.jpg',
+                        img: '/history/1983_85_1.jpg',
                         year: '1983 - 1985'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/1983_85_2.jpg',
+                        img: '/history/1983_85_2.jpg',
                         year: '1983 - 1985'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/1985.jpg',
+                        img: '/history/1985.jpg',
                         year: '1985'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/1985_89_1.jpg',
+                        img: '/history/1985_89_1.jpg',
                         year: '1985 - 1989'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/1985_89_2.jpg',
+                        img: '/history/1985_89_2.jpg',
                         year: '1985 - 1989'
                     }],
                 },
@@ -232,28 +232,28 @@ export default {
             history2: [{
                     title: '',
                     images: [{
-                        img: '/images/history/1989.jpg',
+                        img: '/history/1989.jpg',
                         year: '1989'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/1990_1.jpg',
+                        img: '/history/1990_1.jpg',
                         year: '1990'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/1990_2.jpg',
+                        img: '/history/1990_2.jpg',
                         year: '1990'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/1993_1.jpg',
+                        img: '/history/1993_1.jpg',
                         year: '1993'
                     }],
                 },
@@ -262,56 +262,56 @@ export default {
             history3: [{
                     title: '',
                     images: [{
-                        img: '/images/history/2000_2002_1.jpg',
+                        img: '/history/2000_2002_1.jpg',
                         year: '2000 - 2002'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/2000_2002_2.jpg',
+                        img: '/history/2000_2002_2.jpg',
                         year: '2000 - 2002'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/2001_11.jpg',
+                        img: '/history/2001_11.jpg',
                         year: '2001'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/2002_1.jpg',
+                        img: '/history/2002_1.jpg',
                         year: '2004'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/2004_1.jpeg',
+                        img: '/history/2004_1.jpeg',
                         year: '2004'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/2004_2.jpeg',
+                        img: '/history/2004_2.jpeg',
                         year: '2004'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/2005_06_1.jpg',
+                        img: '/history/2005_06_1.jpg',
                         year: '2005'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/2005_06_2.jpg',
+                        img: '/history/2005_06_2.jpg',
                         year: '2005'
                     }],
                 },
@@ -321,77 +321,77 @@ export default {
             history4: [{
                     title: '',
                     images: [{
-                        img: '/images/history/2006_2007_1.jpg',
+                        img: '/history/2006_2007_1.jpg',
                         year: '2006 - 2007'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/2006_2007_2.jpg',
+                        img: '/history/2006_2007_2.jpg',
                         year: '2006 - 2007'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/2008.jpg',
+                        img: '/history/2008.jpg',
                         year: '2008'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/2008_2011_1.jpeg',
+                        img: '/history/2008_2011_1.jpeg',
                         year: '2008 - 2011'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/2008_2011_2.jpeg',
+                        img: '/history/2008_2011_2.jpeg',
                         year: '2008 - 2011'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/2009.jpg',
+                        img: '/history/2009.jpg',
                         year: '2009'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/2011_14_1.jpeg',
+                        img: '/history/2011_14_1.jpeg',
                         year: '2011 - 2014'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/2011_14_2.jpeg',
+                        img: '/history/2011_14_2.jpeg',
                         year: '2011 - 2014'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/2012_1.jpg',
+                        img: '/history/2012_1.jpg',
                         year: '2012'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/2014_1.jpeg',
+                        img: '/history/2014_1.jpeg',
                         year: '2014'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/2015_1.jpeg',
+                        img: '/history/2015_1.jpeg',
                         year: '2015'
                     }],
                 },
@@ -402,76 +402,76 @@ export default {
              history5: [{
                     title: '',
                     images: [{
-                        img: '/images/history/2016_1.jpg',
+                        img: '/history/2016_1.jpg',
                         year: '2016'
                     }],
                 },
              {
                     title: '',
                     images: [{
-                        img: '/images/history/2016_2.jpg',
+                        img: '/history/2016_2.jpg',
                         year: '2016'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/2017_1.jpeg',
+                        img: '/history/2017_1.jpeg',
                         year: '2017'
                     }],
                 },
                {
                     title: '',
                     images: [{
-                        img: '/images/history/2017_2.jpg',
+                        img: '/history/2017_2.jpg',
                         year: '2017'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/2018_1.jpg',
+                        img: '/history/2018_1.jpg',
                         year: '2018'
                     }],
                 },
                {
                     title: '',
                     images: [{
-                        img: '/images/history/2018_2.jpg',
+                        img: '/history/2018_2.jpg',
                         year: '2018'
                     }],
                 },
                {
                     title: '',
                     images: [{
-                        img: '/images/history/2019_1.jpg',
+                        img: '/history/2019_1.jpg',
                         year: '2019'
                     }],
                 },
                {
                     title: '',
                     images: [{
-                        img: '/images/history/2019_2.jpeg',
+                        img: '/history/2019_2.jpeg',
                         year: '2019'
                     }],
                 },
                 {
                     title: '',
                     images: [{
-                        img: '/images/history/2020_1.jpg',
+                        img: '/history/2020_1.jpg',
                         year: '2020'
                     }],
                 },
                {
                     title: '',
                     images: [{
-                        img: '/images/history/2020_2.jpeg',
+                        img: '/history/2020_2.jpeg',
                         year: '2020'
                     }],
                 },{
                     title: '',
                     images: [{
-                        img: '/images/history/2020_3.jpg',
+                        img: '/history/2020_3.jpg',
                         year: '2020'
                     }],
                 },
